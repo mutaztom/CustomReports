@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (ADT_Rates?)+>
+  <!ELEMENT ADT_Rates (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <ADT_Rates>0</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>10</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>15</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>20</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>30</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>35</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>40</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>50</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>130</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>150</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>230</ADT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ADT_Rates>300</ADT_Rates>
+  </DATA_RECORD>
+</main>

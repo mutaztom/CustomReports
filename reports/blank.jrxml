@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="blank" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="37ad79ed-2c22-4571-99da-8850c53350aa">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="oracustom"/>
+	<queryString language="SQL">
+		<![CDATA[]]>
+	</queryString>
+	<field name="ID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="ID"/>
+	</field>
+	<field name="ITEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ITEM"/>
+	</field>
+	<field name="ARITEM" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="ARITEM"/>
+	</field>
+	<field name="MAINID" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="MAINID"/>
+	</field>
+	<field name="FORFIELD" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="FORFIELD"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch"/>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+	<noData>
+		<band height="64">
+			<staticText>
+				<reportElement x="70" y="0" width="480" height="64" forecolor="#EB1330" uuid="472a62ba-bb3c-44de-bed1-4f8f8d191432"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Report not generated yet; Please click on [Print] or [Export].]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="76" height="64" uuid="ed30f5a2-e439-4cd2-92ea-be6de885407d"/>
+				<imageExpression><![CDATA["reports/logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</noData>
+</jasperReport>

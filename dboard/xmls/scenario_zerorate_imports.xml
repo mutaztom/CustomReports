@@ -1,0 +1,83 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (Month?,YEAR?,ZeroRate_Imports?,ZeroExemted_Imports?)+>
+  <!ELEMENT Month (#PCDATA)>
+  <!ELEMENT YEAR (#PCDATA)>
+  <!ELEMENT ZeroRate_Imports (#PCDATA)>
+  <!ELEMENT ZeroExemted_Imports (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <Month>JAN</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>241289097.21</ZeroRate_Imports>
+    <ZeroExemted_Imports>68912998.39</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>FEB</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>345346019.64</ZeroRate_Imports>
+    <ZeroExemted_Imports>156315744.04</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>MAR</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>313687825.8</ZeroRate_Imports>
+    <ZeroExemted_Imports>130138130.56</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>APR</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>276653505.06</ZeroRate_Imports>
+    <ZeroExemted_Imports>110135328.07</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>MAY</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>288446620.47</ZeroRate_Imports>
+    <ZeroExemted_Imports>130790711.33</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>JUN</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>187504558.6</ZeroRate_Imports>
+    <ZeroExemted_Imports>100311613.59</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>JUL</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>270317527.18</ZeroRate_Imports>
+    <ZeroExemted_Imports>130510791.62</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>AUG</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>184206033.1</ZeroRate_Imports>
+    <ZeroExemted_Imports>86852785.89</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>SEP</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>381684033.87</ZeroRate_Imports>
+    <ZeroExemted_Imports>82129413.64</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>OCT</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>324685109.92</ZeroRate_Imports>
+    <ZeroExemted_Imports>114296870.81</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>NOV</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>637628859.43</ZeroRate_Imports>
+    <ZeroExemted_Imports>170653167.13</ZeroExemted_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>DEC</Month>
+    <YEAR>2018</YEAR>
+    <ZeroRate_Imports>295818073</ZeroRate_Imports>
+    <ZeroExemted_Imports>179301436.51</ZeroExemted_Imports>
+  </DATA_RECORD>
+</main>

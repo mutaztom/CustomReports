@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (Month?,YEAR?,Taxabl_Imports?,ZeroRate_Imports?,Total_Imports?)+>
+  <!ELEMENT Month (#PCDATA)>
+  <!ELEMENT YEAR (#PCDATA)>
+  <!ELEMENT Taxabl_Imports (#PCDATA)>
+  <!ELEMENT ZeroRate_Imports (#PCDATA)>
+  <!ELEMENT Total_Imports (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <Month>JAN</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>252925240.08</Taxabl_Imports>
+    <ZeroRate_Imports>310202095.6</ZeroRate_Imports>
+    <Total_Imports>563127335.68</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>FEB</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>391312870.34</Taxabl_Imports>
+    <ZeroRate_Imports>501661763.68</ZeroRate_Imports>
+    <Total_Imports>892974634.01</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>MAR</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>414031001.56</Taxabl_Imports>
+    <ZeroRate_Imports>443825956.36</ZeroRate_Imports>
+    <Total_Imports>857856957.92</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>APR</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>393459182.33</Taxabl_Imports>
+    <ZeroRate_Imports>386788833.13</ZeroRate_Imports>
+    <Total_Imports>780248015.46</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>MAY</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>438417462.04</Taxabl_Imports>
+    <ZeroRate_Imports>419237331.8</ZeroRate_Imports>
+    <Total_Imports>857654793.84</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>JUN</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>332846775.96</Taxabl_Imports>
+    <ZeroRate_Imports>287816172.19</ZeroRate_Imports>
+    <Total_Imports>620662948.15</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>JUL</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>487326497.44</Taxabl_Imports>
+    <ZeroRate_Imports>400828318.8</ZeroRate_Imports>
+    <Total_Imports>888154816.23</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>AUG</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>375293609.68</Taxabl_Imports>
+    <ZeroRate_Imports>271058818.99</ZeroRate_Imports>
+    <Total_Imports>646352428.68</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>SEP</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>440519738.32</Taxabl_Imports>
+    <ZeroRate_Imports>463813447.51</ZeroRate_Imports>
+    <Total_Imports>904333185.83</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>OCT</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>505891644.21</Taxabl_Imports>
+    <ZeroRate_Imports>438981980.73</ZeroRate_Imports>
+    <Total_Imports>944873624.94</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>NOV</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>607495969.77</Taxabl_Imports>
+    <ZeroRate_Imports>808282026.56</ZeroRate_Imports>
+    <Total_Imports>1415777996.33</Total_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Month>DEC</Month>
+    <YEAR>2018</YEAR>
+    <Taxabl_Imports>754334562.85</Taxabl_Imports>
+    <ZeroRate_Imports>475119509.51</ZeroRate_Imports>
+    <Total_Imports>1229454072.35</Total_Imports>
+  </DATA_RECORD>
+</main>

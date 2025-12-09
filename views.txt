@@ -1,0 +1,27 @@
+imfullimduty;التقرير الكلي لرسم الوارد لصندوق النقد الدولي;report
+imfallprod;التقرير الكلي لرسم الوارد بالمجموعات السلعية;report
+imdtaxrateanal;تقرير رسم الوارد;report
+imdzeroratedbdn;تقرير الفاقد الإيرادي لرسم الوارد بالأسباب;report
+vatanal;تقرير القيمة المضافة;report
+vatzeroratedbdn;تقرير الفاقد الإيرادي للقيمة المضافة بالأسباب;report
+adtratesanal;تقرير الرسم الإضافي;report
+adtzeroratedbd;تقرير الفاقد الإيرادي للرسم الإضافي بالأسباب;report
+imfzerorate;تحليل الفئة الصفرية والإعفاءات لرسم الوارد;report
+imfrateanal;توزيع قيمة الواردات;report
+imfratefreaanal;الواردات المعفاة من الرسوم الجمركية حسب فئات الرسم;report
+imfexmp;الواردات المعفاة من الرسوم الجمركية حسب نوع الإعفاء;report
+vsvatimports;قيمة الواردات الخاضعة لضريبة القيمة المضافة;report
+vatexpimports;الإعفاءات من ضريبة القيمة المضافة;report
+atdimported;الرسم الإضافي على السلع المستوردة;report
+exmptedvatrev;قيمة الواردات العفاة من الرسم الإضافي و الإعفاءات الممنوحة;report
+expcommod;سلع الصادر(بالمجموعة السلعية);report
+expcommodbyprod;سلع الصادر (بالسلعة);report
+tbcompareyear;الميزان التجاري بين السنة الحالية و السنة الماضية (لشهر معين);report
+genfinanperformance;الأداء المالي العام;report
+performancedet;الأداء بالبنود التفصيلية وفقاً لنظام (GFS);report
+accumtotalimp;الأداء الفعلي لقيمة الواردات الكلية;report
+taxableimports;الأداء الفعلي لقيمة الواردات الخاضعة للرسوم الجمركية;report
+curlasttotalimports;قيمة الواردات الكلية بين السنة الحالية و السنة الماضية (لشهر معين);report
+s001;التعديلات التي تمت في الشهادة;report
+s002;القوائم المدرج عليها الرقم الضريبي;report
+S003;نسب المسارب;report

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="com.rationalteam"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="root">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="maincat" type="xs:string">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element maxOccurs="unbounded" name="report">
+                                <xs:complexType>
+                                    <xs:sequence>
+                                        <xs:element name="repid" type="xs:integer" />
+                                        <xs:element name="title" type="xs:string" />
+                                        <xs:element name="repnam" type="xs:string" />
+                                        <xs:element name="arname" type="xs:string" />
+                                        <xs:element name="desc" type="xs:string" />
+                                        <xs:element name="ardesc" type="xs:string" />
+                                        <xs:element name="datefield" type="xs:string" />
+                                        <xs:element name="selformula" type="xs:string" />
+                                        <xs:element name="parameter" type="xs:string" nillable="true"/>
+                                    </xs:sequence>
+                                    <xs:attribute name="hasOptions" type="xs:boolean" use="required" default="false"/>
+                                </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                        <xs:attribute name="category" type="xs:string"/>
+                        <xs:attribute name="arname" type="xs:string"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

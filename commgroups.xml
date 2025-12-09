@@ -1,0 +1,101 @@
+<root>
+  <commgroup>
+    <catid>1</catid>
+    <comset>
+      <commgroupid>0000200000000</commgroupid>
+      <commgroupid>0000400000000</commgroupid>
+      <commgroupid>0000700000000</commgroupid>
+    </comset>
+    <catname>Manufactured Products</catname>
+    <arcatname>السلع المصنعة</arcatname>
+    <commgroupid>0000200000000</commgroupid>
+    <commgroupid>0000300000000</commgroupid>
+    <commgroupid>0000500000000</commgroupid>
+  </commgroup>
+  <commgroup>
+    <catid>2</catid>
+    <comset>
+      <commgroupid>002</commgroupid>
+    </comset>
+    <catname>Machinaries and equipments</catname>
+    <arcatname>الألات والمعدات</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>3</catid>
+    <comset>
+      <commgroupid>0000500000000</commgroupid>
+    </comset>
+    <catname>Petrulium Products</catname>
+    <arcatname>منتجات بترولية</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>4</catid>
+    <comset>
+      <commgroupid>test 4</commgroupid>
+    </comset>
+    <catname>Transport Utilities</catname>
+    <arcatname>معدات النقل</arcatname>
+    <commgroupid>test 4</commgroupid>
+  </commgroup>
+  <commgroup>
+    <catid>5</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>الكيماويات</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>6</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>المنسوجات</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>7</catid>
+    <comset>
+      <commgroupid>test7</commgroupid>
+    </comset>
+    <catname>Raw Materials</catname>
+    <arcatname>المواد الخام</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>8</catid>
+    <comset>
+      <commgroupid>0009200000000</commgroupid>
+      <commgroupid>0010300000000</commgroupid>
+      <commgroupid>0000300000000</commgroupid>
+    </comset>
+    <catname>Topaco And Drinks</catname>
+    <arcatname>التبغ والمشروبات</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>9</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Alive Animals</catname>
+    <arcatname>الحيوانات الحية</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>10</catid>
+    <comset>
+      <commgroupid/>
+      <commgroupid>9900000000000</commgroupid>
+      <commgroupid>9001600000000</commgroupid>
+      <commgroupid>9100000000000</commgroupid>
+    </comset>
+    <catname>Foods</catname>
+    <arcatname>المواد الغذائية</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>11</catid>
+    <catname>test11</catname>
+    <arcatname>إختبار 11</arcatname>
+    <comset>
+      <commgroupid>111111</commgroupid>
+    </comset>
+  </commgroup>
+</root>

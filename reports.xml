@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<rep:root
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:rep="null"
+        xsi:schemaLocation="com.rationalteam /WEB-INF/reports.xsd" xmlns:p="null">
+    <rep:maincat rep:category="Standard Reports" rep:arname="التقارير الرسمية">
+        <rep:report hasOption="false">
+            <rep:repid>1</rep:repid>
+            <rep:title>IMF All Import Duty Modified</rep:title>
+            <rep:repname>IMFItem</rep:repname>
+            <rep:arname>التقرير الكلي لرسم الوارد لصندوق النقد الدولي</rep:arname>
+            <rep:desc>International Monetry Fund All Duties</rep:desc>
+            <rep:ardesc> التقرير الكلي لرسم الوارد لصندوق النقد الدولي بالسلعة</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>2</rep:repid>
+            <rep:title>IMF All Producs Groups</rep:title>
+            <rep:repname>IMFGrp</rep:repname>
+            <rep:desc>IMF grouped by products groups</rep:desc>
+            <rep:arname>التقرير الكلي لرسم الوارد بالمجموعات السلعية</rep:arname>
+            <rep:ardesc>التقرير الكلي لرسم الوارد بالمجموعات السلعية</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>3</rep:repid>
+            <rep:title>IMD Tax Rates Analysis</rep:title>
+            <rep:repname>imdtaxrateanal</rep:repname>
+            <rep:desc>IMD Tax Rates Analysis</rep:desc>
+            <rep:arname>تقرير رسم الوارد</rep:arname>
+            <rep:ardesc>تقرير رسم الوارد</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>4</rep:repid>
+            <rep:title>IMD Cause of Loss</rep:title>
+            <rep:repname>imdcauseofloss</rep:repname>
+            <rep:desc>IMD Cause of Loss</rep:desc>
+            <rep:arname>الفاقد الإيرادي لرسم الوارد</rep:arname>
+            <rep:ardesc>الفاقد الإيرادي لرسم الوارد</rep:ardesc>
+        </rep:report>
+		 <rep:report hasOption="false">
+            <rep:repid>5</rep:repid>
+            <rep:title>IMD Full Cause of Loss</rep:title>
+            <rep:repname>IMDCauseZero</rep:repname>
+            <rep:desc>IMD Full Cause of Loss</rep:desc>
+            <rep:arname>الفاقد الايرادي الكلي لرسم الوارد</rep:arname>
+            <rep:ardesc>الفاقد الايرادي الكلي لرسم الوارد</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>6</rep:repid>
+            <rep:title> IMD Zero Rated Analysis</rep:title>
+            <rep:repname>vatanal</rep:repname>
+            <rep:desc>IMD Zero Rated Analysis</rep:desc>
+            <rep:arname>تقرير رسم الوارد الفئة الصفرية</rep:arname>
+            <rep:ardesc>تقرير رسم الوارد الفئة الصفرية</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>7</rep:repid>
+            <rep:title>VAT Tax Rates Analysis</rep:title>
+            <rep:repname>taxrateanalysis</rep:repname>
+            <rep:desc>VAT Tax Rates Analysis</rep:desc>
+            <rep:arname>تقرير القيمة المضافة</rep:arname>
+            <rep:ardesc>تقرير القيمة المضافة</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>8</rep:repid>
+            <rep:title>VAT Cause of Loss</rep:title>
+            <rep:repname>vatcauseofloss</rep:repname>
+            <rep:desc>VAT Cause of Loss</rep:desc>
+            <rep:arname>تقرير الفاقد الضريبي للقيمة المضافة</rep:arname>
+            <rep:ardesc>تقرير الفاقد الضريبي للقيمة المضافة</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="false">
+            <rep:repid>9</rep:repid>
+            <rep:title>VAT Full Cause of Loss</rep:title>
+            <rep:repname>VATCuaseZero</rep:repname>
+            <rep:desc>VAT Full Cause of Loss</rep:desc>
+            <rep:arname>الفاقد الايرادي الكلي للقيمة المضافة</rep:arname>
+            <rep:ardesc>الفاقد الايرادي الكلي للقيمة المضافة</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>10</rep:repid>
+            <rep:title>Vat Zerorated Analysis</rep:title>
+            <rep:repname>vatzeroratedanalysis</rep:repname>
+            <rep:desc>Vat Zerorated Analysis</rep:desc>
+            <rep:arname>تقرير القيمة المضافة الفئة الصفرية</rep:arname>
+            <rep:ardesc>تقرير القيمة المضافة الفئة الصفرية</rep:ardesc>
+        </rep:report>
+		 <rep:report hasOption="false">
+            <rep:repid>11</rep:repid>
+            <rep:title>ADT Tax Rates Analysis</rep:title>
+            <rep:repname>adttaxratesanalysis</rep:repname>
+            <rep:desc>ADT Tax Rates Analysis</rep:desc>
+            <rep:arname>تقرير الرسم الإضافي</rep:arname>
+            <rep:ardesc>تقرير الرسم الإضافي</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>12</rep:repid>
+            <rep:title>ADT Cause of Loss</rep:title>
+            <rep:repname>adtcauseofloss</rep:repname>
+            <rep:desc>ADT Cause of Loss</rep:desc>
+            <rep:arname>الفاقد الضريبي للرسم الإضافي</rep:arname>
+            <rep:ardesc>الفاقد الضريبي للرسم الإضافي</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="false">
+            <rep:repid>13</rep:repid>
+            <rep:title>ADT Full Cause of Loss</rep:title>
+            <rep:repname>ADTCuaseZero</rep:repname>
+            <rep:desc>ADT Full Cause of Loss</rep:desc>
+            <rep:arname>الفاقد الايرادي الكلي للرسم الاضافي</rep:arname>
+            <rep:ardesc>الفاقد الايرادي الكلي للرسم الاضافي</rep:ardesc>
+        </rep:report>
+        <rep:report>
+            <rep:repid>14</rep:repid>
+            <rep:title>ADT Zerorated Analysis</rep:title>
+            <rep:repname>adtzeroratedanalysis</rep:repname>
+            <rep:desc>ADT Zerorated Analysis</rep:desc>
+            <rep:arname>تقرير الرسم الإضافي الفئة الصفرية</rep:arname>
+            <rep:ardesc>تقرير الرسم الإضافي الفئة الصفرية</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+    <rep:maincat rep:category="Export Reports" rep:arname="تقارير الصادر">
+        <rep:report>
+            <rep:repid>15</rep:repid>
+            <rep:title>Exports Commodities (Group)</rep:title>
+            <rep:repname>ExpGrp</rep:repname>
+            <rep:desc>Exports Commodities (Group)</rep:desc>
+            <rep:arname>سلع الصادر(بالمجموعة السلعية)</rep:arname>
+            <rep:ardesc>سلع الصادر(بالمجموعة السلعية)</rep:ardesc>
+        </rep:report>
+        <rep:report>
+            <rep:repid>16</rep:repid>
+            <rep:title>Exports Commodities (by Products)</rep:title>
+            <rep:repname>ExportCom</rep:repname>
+            <rep:desc>Exports Commodities (Grouped by Products)</rep:desc>
+            <rep:arname>سلع الصادر (بالسلعة)</rep:arname>
+            <rep:ardesc>سلع الصادر (بالسلعة)</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+    <rep:maincat rep:category="Trade Balance" rep:arname="الميزان التجاري">
+        <rep:report>
+            <rep:repid>17</rep:repid>
+            <rep:title>Trade balance compare prev.</rep:title>
+            <rep:repname>tbcompareyear</rep:repname>
+            <rep:desc>Trade balance between the Current Year and Last Year</rep:desc>
+            <rep:arname>الميزان التجاري بين السنة الحالية و السنة الماضية (لشهر معين)</rep:arname>
+            <rep:ardesc>الميزان التجاري بين السنة الحالية و السنة الماضية (لشهر معين)</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+    <rep:maincat rep:category="General Financial Performance" rep:arname="تقارير الأداء المالي">
+        <rep:report>
+            <rep:repid>18</rep:repid>
+            <rep:title>General Financial Performance</rep:title>
+            <rep:repname>genfinanperformance</rep:repname>
+            <rep:desc>General Financial Performance</rep:desc>
+            <rep:arname>الأداء المالي العام</rep:arname>
+            <rep:ardesc>الأداء المالي العام
+            </rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>19</rep:repid>
+            <rep:title>Monthly and Accumulative Total Value of Imports</rep:title>
+            <rep:repname>accumtotalimp</rep:repname>
+            <rep:desc>Monthly and Accumulative Total Value of Imports</rep:desc>
+            <rep:arname>الأداء الفعلي لقيمة الواردات الكلية</rep:arname>
+            <rep:ardesc>الأداء الفعلي لقيمة الواردات الكلية</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>20</rep:repid>
+            <rep:title>Monthly and Accumulative Value of Taxable Imports</rep:title>
+            <rep:repname>taxableimports</rep:repname>
+            <rep:desc>The Actual Performance of The Value of Total Imports and Taxable Imports</rep:desc>
+            <rep:arname>الأداء الفعلي لقيمة الواردات الخاضعة للرسوم الجمركية</rep:arname>
+            <rep:ardesc>الأداء الفعلي لقيمة الواردات الخاضعة للرسوم الجمركية</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>21</rep:repid>
+            <rep:title>Total Value of Imports between the Current Year and Last Year</rep:title>
+            <rep:repname>curlasttotalimports</rep:repname>
+            <rep:desc>The Actual Performance of The Value of Total Imports and Taxable Imports</rep:desc>
+            <rep:arname>قيمة الواردات الكلية بين السنة الحالية و السنة الماضية (لشهر معين)</rep:arname>
+            <rep:ardesc>قيمة الواردات الكلية بين السنة الحالية و السنة الماضية (لشهر معين)</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+	<rep:maincat rep:category="Analysis Reports" rep:arname="التقارير التحليلية">
+        <rep:report>
+            <rep:repid>22</rep:repid>
+            <rep:title>Country agreements group by Country and Loss</rep:title>
+            <rep:repname>CountryAgreementsLoss</rep:repname>
+            <rep:desc>Country agreements group by Country and Loss</rep:desc>
+            <rep:arname>الاتفاقيات بالبلدان والفاقد الايرادي</rep:arname>
+            <rep:ardesc>الاتفاقيات بالبلدان والفاقد الايرادي
+            </rep:ardesc>
+        </rep:report>
+        <rep:report>
+            <rep:repid>23</rep:repid>
+            <rep:title>Commodity agreements</rep:title>
+            <rep:repname>CommodityAgreements</rep:repname>
+            <rep:desc>Commodity agreements</rep:desc>
+            <rep:arname>الاتفاقيات بالسلع</rep:arname>
+            <rep:ardesc>الاتفاقيات بالسلع
+            </rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>24</rep:repid>
+            <rep:title>Group agreements</rep:title>
+            <rep:repname>GroupAgreements</rep:repname>
+            <rep:desc>Group agreements</rep:desc>
+            <rep:arname>الاتفاقيات بالمجموعات</rep:arname>
+            <rep:ardesc>الاتفاقيات بالمجموعات</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>25</rep:repid>
+            <rep:title>Trade exchange in countries imports</rep:title>
+            <rep:repname>TradeExchangeCountries</rep:repname>
+            <rep:desc>Trade exchange in countries imports</rep:desc>
+            <rep:arname>التبادل التجاري بالبلدان واردات</rep:arname>
+            <rep:ardesc>التبادل التجاري بالبلدان واردات</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>26</rep:repid>
+            <rep:title>Trade exchange in countries by Commodity</rep:title>
+            <rep:repname>TradeExchangeCommodity</rep:repname>
+            <rep:desc>Trade exchange in countries by Commodity</rep:desc>
+            <rep:arname>التبادل التجاري بالسلع واردات</rep:arname>
+            <rep:ardesc>التبادل التجاري بالسلع واردات</rep:ardesc>
+        </rep:report>
+		<rep:report>
+            <rep:repid>27</rep:repid>
+            <rep:title>Trade exchange by groups imports</rep:title>
+            <rep:repname>TradeExchangeGroups</rep:repname>
+            <rep:desc>Trade exchange by groups imports</rep:desc>
+            <rep:arname>التبادل التجاري بالمجموعات واردات</rep:arname>
+            <rep:ardesc>التبادل التجاري بالمجموعات واردات
+            </rep:ardesc>
+        </rep:report>
+        <rep:report>
+            <rep:repid>28</rep:repid>
+            <rep:title>Trade exchange by Groups and commodities Export</rep:title>
+            <rep:repname>ExTradeExchangeGroupsCom</rep:repname>
+            <rep:desc>Trade exchange by Groups and commodities Export</rep:desc>
+            <rep:arname>التبادل التجاري بالمجموعات والسلع صادرات</rep:arname>
+            <rep:ardesc>التبادل التجاري بالمجموعات والسلع صادرات
+            </rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>29</rep:repid>
+            <rep:title>Trade exchange by Groups Export</rep:title>
+            <rep:repname>ExTradeExchangeGroups</rep:repname>
+            <rep:desc>Trade exchange by Groups Export</rep:desc>
+            <rep:arname>التبادل التجارى بين الدول بالمجموعات صادرات</rep:arname>
+            <rep:ardesc>التبادل التجارى بين الدول بالمجموعات صادرات</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>30</rep:repid>
+            <rep:title>Trade Exchange by Countries</rep:title>
+            <rep:repname>ExTradeExchangeCountries</rep:repname>
+            <rep:desc>Trade Exchange by Countries</rep:desc>
+            <rep:arname>التبادل التجاري للدول صادرات</rep:arname>
+            <rep:ardesc>التبادل التجاري للدول صادرات</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>31</rep:repid>
+            <rep:title>Trade Balance Countries</rep:title>
+            <rep:repname>TradeBalanceCountries</rep:repname>
+            <rep:desc>Trade Balance Countries</rep:desc>
+            <rep:arname>الميزان التجاري بالدول</rep:arname>
+            <rep:ardesc>الميزان التجاري بالدول</rep:ardesc>
+        </rep:report>
+		 <rep:report hasOption="true">
+            <rep:repid>32</rep:repid>
+            <rep:title>Top Consignee</rep:title>
+            <rep:repname>TopCon</rep:repname>
+            <rep:desc>Top Consignee</rep:desc>
+            <rep:arname>اعلى االمردين</rep:arname>
+            <rep:ardesc>اعلى االمردين</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>33</rep:repid>
+            <rep:title>Top Declarante</rep:title>
+            <rep:repname>TopDec</rep:repname>
+            <rep:desc>Top Declarante</rep:desc>
+            <rep:arname>اعلى المخلصين</rep:arname>
+            <rep:ardesc>اعلى المخلصين</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>34</rep:repid>
+            <rep:title>Top Exporter</rep:title>
+            <rep:repname>TopExporter</rep:repname>
+            <rep:desc>Top Exporter</rep:desc>
+            <rep:arname>اعلى المصدرين</rep:arname>
+            <rep:ardesc>اعلى المصدرين</rep:ardesc>
+        </rep:report>
+		 <rep:report hasOption="true">
+            <rep:repid>35</rep:repid>
+            <rep:title>IMD Investment Full Loss </rep:title>
+            <rep:repname>IMDinvFull</rep:repname>
+            <rep:desc>IMD Investment Full Loss </rep:desc>
+            <rep:arname>الفقاد الايرادي الكلي لرسم وارد بقانون الاستثمار</rep:arname>
+            <rep:ardesc>الفقاد الايرادي الكلي لرسم وارد بقانون الاستثمار</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>36</rep:repid>
+            <rep:title>IMD Investment Part Loss </rep:title>
+            <rep:repname>IMDinvPart</rep:repname>
+            <rep:desc>IMD Investment Part Loss </rep:desc>
+            <rep:arname>الفقاد الايرادي الجزئي لرسم وارد بقانون الاستثمار</rep:arname>
+            <rep:ardesc>الفقاد الايرادي الجزئي لرسم وارد بقانون الاستثمار</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+    <rep:maincat rep:category="Risk Reports" rep:arname="تقارير المخاطر">
+        <rep:report hasOption="true">
+            <rep:repid>37</rep:repid>
+            <rep:title>Modification of the item</rep:title>
+            <rep:repname>S001HS</rep:repname>
+            <rep:desc>Modification of the item</rep:desc>
+            <rep:arname>التعديل علي البند</rep:arname>
+            <rep:ardesc>التعديل علي البند</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>38</rep:repid>
+            <rep:title>Modification of the item and Declarent</rep:title>
+            <rep:repname>S001DecHs</rep:repname>
+            <rep:desc>Modification of the item and Declarent</rep:desc>
+            <rep:arname>التعديل علي البند مع المخلص</rep:arname>
+            <rep:ardesc>التعديل علي البند مع المخلص</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>39</rep:repid>
+            <rep:title>Modification of National procedure</rep:title>
+            <rep:repname>S001NAT</rep:repname>
+            <rep:desc>Modification of National procedure</rep:desc>
+            <rep:arname>التعديل علي الاجراء القومي</rep:arname>
+            <rep:ardesc>التعديل علي الاجراء القومي</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="true">
+            <rep:repid>40</rep:repid>
+            <rep:title>Modification of Extended procedure</rep:title>
+            <rep:repname>S001EXT</rep:repname>
+            <rep:desc>Modification of Extended procedure</rep:desc>
+            <rep:arname>التعديل علي الاجراء الممتد</rep:arname>
+            <rep:ardesc>التعديل علي الاجراء الممتد</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>41</rep:repid>
+            <rep:title>Under Control List</rep:title>
+            <rep:repname>UnderControl</rep:repname>
+            <rep:desc>Under Control List</rep:desc>
+            <rep:arname>قوائم تحت الرقابة</rep:arname>
+            <rep:ardesc>قوائم تحت الرقابة</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>42</rep:repid>
+            <rep:title>Black List</rep:title>
+            <rep:repname>BlackList</rep:repname>
+            <rep:desc>Black List</rep:desc>
+            <rep:arname>القائمة السوداء</rep:arname>
+            <rep:ardesc>القائمة السوداء</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="true">
+            <rep:repid>43</rep:repid>
+            <rep:title>Commodity report</rep:title>
+            <rep:repname>ComRep</rep:repname>
+            <rep:desc>Commodity report</rep:desc>
+            <rep:arname>تقرير السلع</rep:arname>
+            <rep:ardesc>تقرير السلع</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="true">
+            <rep:repid>44</rep:repid>
+            <rep:title>redundancy Commodity</rep:title>
+            <rep:repname>RedCom</rep:repname>
+            <rep:desc>redundancy Commodity</rep:desc>
+            <rep:arname>تقرير تكرار البنود</rep:arname>
+            <rep:ardesc>تقرير تكرار البنود</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>45</rep:repid>
+            <rep:title>Top 100 con list</rep:title>
+            <rep:repname>Top100conlist</rep:repname>
+            <rep:desc>Top 100 con list</rep:desc>
+            <rep:arname>قائمة اعلا 100 مورد</rep:arname>
+            <rep:ardesc>قائمة اعلا 100 مورد</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="true">
+            <rep:repid>46</rep:repid>
+            <rep:title>Top 100 EXP list</rep:title>
+            <rep:repname>Top100explist</rep:repname>
+            <rep:desc>Top 100 EXP list</rep:desc>
+            <rep:arname>قائمة اعلا 100 مصدر</rep:arname>
+            <rep:ardesc>قائمة اعلا 100 مصدر</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+
+
+</rep:root>
+
+

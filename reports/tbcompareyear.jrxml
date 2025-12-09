@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-10-05T11:34:23 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Trade balance compare prev." pageWidth="595" pageHeight="842" columnWidth="455" leftMargin="70" rightMargin="70" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" whenResourceMissingType="Key" uuid="8f5b312e-ad06-44c2-bb06-206ef15b4fc2">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.report.description" value="Trade balance compare prev."/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ReportsDB"/>
+	<template><![CDATA[System.getenv("CUSTREPDATA")+"/reports/rtstyle.jrtx"]]></template>
+	<parameter name="startdate" class="java.sql.Date"/>
+	<parameter name="enddate" class="java.sql.Date"/>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Vat Taxrate Analysis"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="repstartdate" class="java.lang.String"/>
+	<parameter name="rependdate" class="java.lang.String"/>
+	<parameter name="username" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select table1."Month_Year", table1."Custom Value" "Export Value", table2."Custom Value" "Import Value",table1."Custom Value"-table2."Custom Value" Net
+from
+(
+SELECT TO_CHAR($P{startdate}, 'MON ')||TO_CHAR($P{startdate}, 'YYYY')||' TO '||TO_CHAR($P{enddate}, 'MON ')||TO_CHAR($P{enddate}, 'YYYY') "Month_Year",
+SUM(AWUNADM.SAD_ITEM.VIT_CIF/DECODE(AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) "Custom Value" 
+FROM AWUNADM.SAD_GENERAL_SEGMENT, AWUNADM.SAD_ITEM
+WHERE (AWUNADM.SAD_GENERAL_SEGMENT.IDE_TYP_PRC=1
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_NBR IS NOT NULL
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_SER IS NOT NULL)
+ AND  (AWUNADM.SAD_GENERAL_SEGMENT.INSTANCEID=AWUNADM.SAD_ITEM.INSTANCEID(+))
+GROUP BY 
+TO_CHAR(AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT, 'YYYY')
+) table1,
+(
+SELECT  TO_CHAR($P{startdate}, 'MON ')||TO_CHAR($P{startdate}, 'YYYY')||' TO '||TO_CHAR($P{enddate}, 'MON ')||TO_CHAR($P{enddate}, 'YYYY') "Month_Year",
+ 
+SUM(AWUNADM.SAD_ITEM.VIT_CIF/DECODE(AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) "Custom Value" 
+FROM AWUNADM.SAD_GENERAL_SEGMENT, AWUNADM.SAD_ITEM
+WHERE (AWUNADM.SAD_GENERAL_SEGMENT.IDE_TYP_PRC=4
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_NBR IS NOT NULL
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_SER IS NOT NULL)
+ AND  (AWUNADM.SAD_GENERAL_SEGMENT.INSTANCEID=AWUNADM.SAD_ITEM.INSTANCEID(+))
+GROUP BY 
+TO_CHAR(AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT, 'YYYY')
+) table2
+where table1."Month_Year" = table2."Month_Year"
+union 
+select table1."Month_Year", table1."Custom Value" "Export Value", table2."Custom Value" "Import Value",table1."Custom Value"-table2."Custom Value" Net
+from
+(
+SELECT  TO_CHAR($P{startdate}-365, 'MON ')||TO_CHAR($P{startdate}-365, 'YYYY')||' TO '||TO_CHAR($P{enddate}-365, 'MON ')||TO_CHAR($P{enddate}-365, 'YYYY') "Month_Year",
+SUM(AWUNADM.SAD_ITEM.VIT_CIF/DECODE(AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate}-365)
+and rownum=1))) "Custom Value" 
+FROM AWUNADM.SAD_GENERAL_SEGMENT, AWUNADM.SAD_ITEM
+WHERE (AWUNADM.SAD_GENERAL_SEGMENT.IDE_TYP_PRC=1
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT BETWEEN $P{startdate}-365 AND $P{enddate}-365
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_NBR IS NOT NULL
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_SER IS NOT NULL)
+ AND  (AWUNADM.SAD_GENERAL_SEGMENT.INSTANCEID=AWUNADM.SAD_ITEM.INSTANCEID(+))
+GROUP BY 
+TO_CHAR(AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT, 'YYYY') 
+) table1,
+(
+SELECT   TO_CHAR($P{startdate}-365, 'MON ')||TO_CHAR($P{startdate}-365, 'YYYY')||' TO '||TO_CHAR($P{enddate}-365, 'MON ')||TO_CHAR($P{enddate}-365, 'YYYY') "Month_Year", 
+SUM(AWUNADM.SAD_ITEM.VIT_CIF/DECODE(AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+and AWCURUPDATE_GEN.VDAT <$P{enddate}-365)
+and rownum=1))) "Custom Value" 
+FROM AWUNADM.SAD_GENERAL_SEGMENT, AWUNADM.SAD_ITEM
+WHERE (AWUNADM.SAD_GENERAL_SEGMENT.IDE_TYP_PRC=4
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT BETWEEN $P{startdate}-365 AND $P{enddate}-365
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_NBR IS NOT NULL
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_SER IS NOT NULL)
+ AND  (AWUNADM.SAD_GENERAL_SEGMENT.INSTANCEID=AWUNADM.SAD_ITEM.INSTANCEID(+))
+GROUP BY 
+TO_CHAR(AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT, 'YYYY')
+) table2
+where table1."Month_Year" = table2."Month_Year"]]>
+	</queryString>
+	<field name="Month_Year" class="java.lang.String"/>
+	<field name="Export Value" class="java.math.BigDecimal"/>
+	<field name="Import Value" class="java.math.BigDecimal"/>
+	<field name="NET" class="java.math.BigDecimal"/>
+	<variable name="MonYer" class="java.lang.String" calculation="Sum">
+		<variableExpression><![CDATA[$F{Month_Year}]]></variableExpression>
+	</variable>
+	<variable name="Exp" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{Export Value}]]></variableExpression>
+	</variable>
+	<variable name="imp" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{Import Value}]]></variableExpression>
+	</variable>
+	<variable name="Net" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NET}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement style="rtstyle" x="20" y="65" width="410" height="30" uuid="a5410cf4-6642-42ef-9a64-f1eabfefbdde"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="12" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<image hAlign="Center" onErrorType="Icon">
+				<reportElement style="rtstyle" x="-5" y="0" width="469" height="60" uuid="41914358-023d-4428-85c3-7f60f266ed8a"/>
+				<imageExpression><![CDATA[System.getenv("CUSTREPDATA")+"/reports/header.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="-2" y="95" width="469" height="30" uuid="335f18ce-0786-4790-87e4-753af8be218f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["From "+$P{repstartdate}+ " To "+$P{rependdate}+  "  By User: "+$P{username}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement style="rtstyle" x="50" y="10" width="100" height="19" uuid="9e44da9e-58e7-4148-bf96-35a14823a612"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="rtstyle" x="0" y="10" width="50" height="19" uuid="bf9c54fb-c754-4932-9397-b1b20e74ee86"/>
+				<textElement>
+					<font fontName="SansSerif"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<staticText>
+				<reportElement style="rtstyle" mode="Opaque" x="129" y="0" width="116" height="20" backcolor="#DBD7D7" uuid="659dc480-7cf1-4012-96d7-53bd9dfa8da0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c07b1fa2-e55c-42d2-bb1d-e23371d8fdad"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Export Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="rtstyle" mode="Opaque" x="245" y="0" width="113" height="20" backcolor="#DBD7D7" uuid="5dd3bae8-053c-4908-8e12-bd351a98e028">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c03987a-443e-4682-bda9-942ef87a86a9"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Import Value]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="rtstyle" mode="Opaque" x="358" y="0" width="113" height="20" backcolor="#DBD7D7" uuid="4a61f1b5-e058-478c-a2c7-ec4d459beb19">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0390b10-85d3-4cf5-9102-ac74f0e71bee"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NET]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="-20" y="0" width="149" height="20" backcolor="#DBD7D7" uuid="7f990c75-d1e5-4b40-8ee3-f4993da99668"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField>
+				<reportElement style="rtstyle" x="129" y="0" width="116" height="20" uuid="9e5ac0ef-1ee6-4608-9a45-3a259fe62dbe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c07b1fa2-e55c-42d2-bb1d-e23371d8fdad"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Export Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="rtstyle" x="245" y="0" width="113" height="20" uuid="aba97d68-27d8-446a-bb35-4f4e65aba83c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3c03987a-443e-4682-bda9-942ef87a86a9"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Import Value}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement style="rtstyle" x="358" y="0" width="113" height="20" uuid="df537e39-89cc-4c39-ac3c-eed6ab4606e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d0390b10-85d3-4cf5-9102-ac74f0e71bee"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NET}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="-20" y="0" width="149" height="20" uuid="0408416e-affa-4885-ac2d-0af6bac39ed7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="SansSerif" size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Month_Year}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="47" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="147" y="0" width="100" height="17" uuid="6486f3e6-43e3-4c20-b276-0495f1f841dc"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="247" y="0" width="100" height="17" uuid="6ce1ff00-a712-44fd-8f9e-81555aec717f"/>
+				<textElement textAlignment="Left"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+		</band>
+	</summary>
+</jasperReport>

@@ -1,0 +1,353 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (Code?,Office_Name?,Total_Cust_Value?,OFFICE_AVG?)+>
+  <!ELEMENT Code (#PCDATA)>
+  <!ELEMENT Office_Name (#PCDATA)>
+  <!ELEMENT Total_Cust_Value (#PCDATA)>
+  <!ELEMENT OFFICE_AVG (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <Code>PZUS0</Code>
+    <Office_Name>PortSudan South Quay</Office_Name>
+    <Total_Cust_Value>244509395625.34</Total_Cust_Value>
+    <OFFICE_AVG>0.53</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUN0</Code>
+    <Office_Name>PortSudan North Quay</Office_Name>
+    <Total_Cust_Value>48703103492.42</Total_Cust_Value>
+    <OFFICE_AVG>0.1</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SUB00</Code>
+    <Office_Name>Suba containers terminal</Office_Name>
+    <Total_Cust_Value>29191397113.4</Total_Cust_Value>
+    <OFFICE_AVG>0.06</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUD0</Code>
+    <Office_Name>PortSudan - Digna Port</Office_Name>
+    <Total_Cust_Value>21759214624.89</Total_Cust_Value>
+    <OFFICE_AVG>0.05</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KHA00</Code>
+    <Office_Name>Khartoum Airport</Office_Name>
+    <Total_Cust_Value>20607354535.59</Total_Cust_Value>
+    <OFFICE_AVG>0.04</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXCRN</Code>
+    <Office_Name>RIVER NILE EXCISE DUTY</Office_Name>
+    <Total_Cust_Value>18441066283.7</Total_Cust_Value>
+    <OFFICE_AVG>0.04</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXC00</Code>
+    <Office_Name>EXCISE DUTY</Office_Name>
+    <Total_Cust_Value>13548398825.3</Total_Cust_Value>
+    <OFFICE_AVG>0.03</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>GRYFZ</Code>
+    <Office_Name>Gurry Free Zones</Office_Name>
+    <Total_Cust_Value>11180595302.12</Total_Cust_Value>
+    <OFFICE_AVG>0.02</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUS1</Code>
+    <Office_Name>PortSudan-SouthQuay-DmaDma</Office_Name>
+    <Total_Cust_Value>11008564993.83</Total_Cust_Value>
+    <OFFICE_AVG>0.02</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>WHS00</Code>
+    <Office_Name>WAREHOUSES &#40;OMDURMAN&#41;</Office_Name>
+    <Total_Cust_Value>7580841008.13</Total_Cust_Value>
+    <OFFICE_AVG>0.02</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>ASHK0</Code>
+    <Office_Name>Customs Crossing Ashkit </Office_Name>
+    <Total_Cust_Value>6051498135.89</Total_Cust_Value>
+    <OFFICE_AVG>0.01</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUSF</Code>
+    <Office_Name>SAYGA FREE ZONE RED SEA</Office_Name>
+    <Total_Cust_Value>5372703956.39</Total_Cust_Value>
+    <OFFICE_AVG>0.01</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>ATB00</Code>
+    <Office_Name>Atbara dry port</Office_Name>
+    <Total_Cust_Value>4026653293.81</Total_Cust_Value>
+    <OFFICE_AVG>0.01</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUSD</Code>
+    <Office_Name>DAL Customs Office &#40;PortSudan&#41;</Office_Name>
+    <Total_Cust_Value>3644517870.19</Total_Cust_Value>
+    <OFFICE_AVG>0.01</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>MAD00</Code>
+    <Office_Name>Madani Dry Port</Office_Name>
+    <Total_Cust_Value>3335488825.07</Total_Cust_Value>
+    <OFFICE_AVG>0.01</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUO0</Code>
+    <Office_Name>Port sudan osaif</Office_Name>
+    <Total_Cust_Value>2061137238.6</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUFZ</Code>
+    <Office_Name>PortSudan - RedSea Free Zones</Office_Name>
+    <Total_Cust_Value>1529552596.04</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXCBG</Code>
+    <Office_Name>EXCISE DUTY ALBAGIER</Office_Name>
+    <Total_Cust_Value>1109098105.29</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMG00</Code>
+    <Office_Name>COMPACT SMUGGALIN</Office_Name>
+    <Total_Cust_Value>1096322026.05</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>OBD00</Code>
+    <Office_Name>ELOBEID DRY PORT</Office_Name>
+    <Total_Cust_Value>851002275.52</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DNG00</Code>
+    <Office_Name>DONGOLA CUSTOMS</Office_Name>
+    <Total_Cust_Value>749332054.8</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>GDR00</Code>
+    <Office_Name>Gadaref dry port</Office_Name>
+    <Total_Cust_Value>698465781.87</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KAR00</Code>
+    <Office_Name>Karimaa Dry Port</Office_Name>
+    <Total_Cust_Value>644011126.2</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>ARG00</Code>
+    <Office_Name>Customs Crossing Argin</Office_Name>
+    <Total_Cust_Value>621983940.43</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DFGN0</Code>
+    <Office_Name>GENENA CUSTOMS</Office_Name>
+    <Total_Cust_Value>603293025.71</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>WHF00</Code>
+    <Office_Name>Wadi Halfa Customs</Office_Name>
+    <Total_Cust_Value>598818646.76</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>GIAD0</Code>
+    <Office_Name>ELBAGAIR CUSTOMS</Office_Name>
+    <Total_Cust_Value>592480281.17</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>GLB00</Code>
+    <Office_Name>GALABAT CUSTOMS</Office_Name>
+    <Total_Cust_Value>565549007.62</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>FSH00</Code>
+    <Office_Name>El Fasher Customs</Office_Name>
+    <Total_Cust_Value>561703393.87</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KST00</Code>
+    <Office_Name>KOSTI DRY PORT</Office_Name>
+    <Total_Cust_Value>496868183.61</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DFNL0</Code>
+    <Office_Name>NIALA CUSTOMS</Office_Name>
+    <Total_Cust_Value>493583564.16</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXCMD</Code>
+    <Office_Name>GAZERA EXCISE DUTY</Office_Name>
+    <Total_Cust_Value>286541040</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUD1</Code>
+    <Office_Name>PortSudan -Digna Terminal</Office_Name>
+    <Total_Cust_Value>200068728.22</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KSA00</Code>
+    <Office_Name>Kasala Customs Office</Office_Name>
+    <Total_Cust_Value>189974524.81</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DFZA0</Code>
+    <Office_Name>ZALINGEI CUSTOMS </Office_Name>
+    <Total_Cust_Value>189052246.31</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXCWN</Code>
+    <Office_Name>WHITE NILE EXCISE DUTY</Office_Name>
+    <Total_Cust_Value>163493392.51</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KUA00</Code>
+    <Office_Name>OBYED CUSTOMS</Office_Name>
+    <Total_Cust_Value>163136791.72</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>ABD00</Code>
+    <Office_Name>ABEDIA CUSTOMS OFFICE</Office_Name>
+    <Total_Cust_Value>161887145.6</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGNH</Code>
+    <Office_Name>COMBACT SMUGGLING ALNHOUD</Office_Name>
+    <Total_Cust_Value>160185475.71</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGDN</Code>
+    <Office_Name>COMBACT SMUGGLING ALDAIN</Office_Name>
+    <Total_Cust_Value>77526624.21</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KUW00</Code>
+    <Office_Name>WEST KURDFAN CUSTOMS</Office_Name>
+    <Total_Cust_Value>59930751.17</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>KHA03</Code>
+    <Office_Name>Khartoum AirPort Terminal</Office_Name>
+    <Total_Cust_Value>40019055.94</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGPZ</Code>
+    <Office_Name>Combat Smuggling RedSea</Office_Name>
+    <Total_Cust_Value>25820527.74</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>PZUA0</Code>
+    <Office_Name>Port Sudan Airport</Office_Name>
+    <Total_Cust_Value>16309652.2</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGKS</Code>
+    <Office_Name>Combat Smuggling KOSTI</Office_Name>
+    <Total_Cust_Value>14026146.3</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGDO</Code>
+    <Office_Name>Compact Smuggling Dongla</Office_Name>
+    <Total_Cust_Value>13905496.78</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGAT</Code>
+    <Office_Name>COMPACT SMUGGALING ATBARA</Office_Name>
+    <Total_Cust_Value>11827664.28</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGA0</Code>
+    <Office_Name>COMBAT SMUGGLING OBYED</Office_Name>
+    <Total_Cust_Value>10992992.38</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DMZ00</Code>
+    <Office_Name>DMAZIN CUSTOMS</Office_Name>
+    <Total_Cust_Value>9928913.06</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>EXCPZ</Code>
+    <Office_Name>Port Sudan Excise Duty</Office_Name>
+    <Total_Cust_Value>8915903.65</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>AHD00</Code>
+    <Office_Name>ABUHAMAD CUSTOMS OFFICE</Office_Name>
+    <Total_Cust_Value>7078850.4</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>ASHK1</Code>
+    <Office_Name>Customs Crossing Ashkit Terminal</Office_Name>
+    <Total_Cust_Value>6466320</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>CPR00</Code>
+    <Office_Name>Customs Petroleum Refinery</Office_Name>
+    <Total_Cust_Value>5718441.82</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGSI</Code>
+    <Office_Name>COMPACT SMUGGALIN SINNAR</Office_Name>
+    <Total_Cust_Value>3204186.63</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>DFML0</Code>
+    <Office_Name>MALIT CUSTOMS</Office_Name>
+    <Total_Cust_Value>558774</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGDZ</Code>
+    <Office_Name>COMBAT SMUGGLING DMAZIN</Office_Name>
+    <Total_Cust_Value>558357.57</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Code>SMGMD</Code>
+    <Office_Name>COMBAT SMUGGLING MADNI</Office_Name>
+    <Total_Cust_Value>215101.8</Total_Cust_Value>
+    <OFFICE_AVG>0</OFFICE_AVG>
+  </DATA_RECORD>
+</main>

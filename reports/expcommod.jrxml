@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-07-28T11:11:29 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="expcommod" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" whenResourceMissingType="Key" uuid="8f5b312e-ad06-44c2-bb06-206ef15b4fc2">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ReportsDB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<template><![CDATA[System.getenv("CUSTREPDATA")+"/reports/rtstyle.jrtx"]]></template>
+	<parameter name="startdate" class="java.sql.Date"/>
+	<parameter name="enddate" class="java.sql.Date"/>
+	<parameter name="title" class="java.lang.String">
+		<defaultValueExpression><![CDATA["Export Commodity By Group"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT ALL SUBSTR(AWUNADM.SAD_ITEM.TAR_HSC_NB1, 1, 4) HSB_NB14, 
+AWUNADM.SAD_ITEM.TAR_HSC_NB1, SUM(AWUNADM.SAD_ITEM.VIT_WGT_NET) "Net Mass (TN)", 
+SUM(AWUNADM.SAD_ITEM.VIT_CIF/DECODE(AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, AWUNADM.SAD_ITEM.VIT_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWCURUPDATE_ITM,
+                                         AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            from    
+                             AWCURUPDATE_ITM,
+                             AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1)))"Custom Value USD", 
+SUM(AWUNADM.SAD_SUPPLEMENTARY_UNIT.TAR_SUP_QTY) "number"
+FROM AWUNADM.SAD_GENERAL_SEGMENT, 
+AWUNADM.SAD_ITEM, AWUNADM.SAD_SUPPLEMENTARY_UNIT
+WHERE (AWUNADM.SAD_GENERAL_SEGMENT.IDE_TYP_PRC=1
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_NBR IS NOT NULL
+ AND AWUNADM.SAD_GENERAL_SEGMENT.IDE_REG_SER IS NOT NULL)
+ AND  ((AWUNADM.SAD_GENERAL_SEGMENT.INSTANCEID=AWUNADM.SAD_ITEM.INSTANCEID(+))
+ AND (AWUNADM.SAD_ITEM.INSTANCEID=AWUNADM.SAD_SUPPLEMENTARY_UNIT.INSTANCEID(+))
+ AND (AWUNADM.SAD_ITEM.KEY_ITM_NBR=AWUNADM.SAD_SUPPLEMENTARY_UNIT.KEY_ITM_NBR(+)))
+GROUP BY SUBSTR(AWUNADM.SAD_ITEM.TAR_HSC_NB1, 1, 4), AWUNADM.SAD_ITEM.TAR_HSC_NB1
+ORDER BY SUBSTR(AWUNADM.SAD_ITEM.TAR_HSC_NB1, 1, 4) ASC]]>
+	</queryString>
+	<field name="HSB_NB14" class="java.lang.String"/>
+	<field name="TAR_HSC_NB1" class="java.lang.String"/>
+	<field name="Net Mass (TN)" class="java.math.BigDecimal"/>
+	<field name="Custom Value USD" class="java.math.BigDecimal"/>
+	<field name="number" class="java.math.BigDecimal"/>
+	<variable name="NetSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{TAR_HSC_NB1}]]></variableExpression>
+	</variable>
+	<variable name="USDSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{Custom Value USD}]]></variableExpression>
+	</variable>
+	<variable name="NumSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{number}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="102" splitType="Stretch">
+			<image hAlign="Center" onErrorType="Icon">
+				<reportElement x="30" y="0" width="469" height="60" uuid="41914358-023d-4428-85c3-7f60f266ed8a"/>
+				<imageExpression><![CDATA[System.getenv("CUSTREPDATA")+"/reports/header.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="43" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="50" y="10" width="100" height="19" uuid="9e44da9e-58e7-4148-bf96-35a14823a612"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="10" width="50" height="19" uuid="bf9c54fb-c754-4932-9397-b1b20e74ee86"/>
+				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.HorizontalRowLayout"/>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="111" height="20" backcolor="#D4D4D4" uuid="51cf4ebf-3f95-4fbb-993b-8aab33fec791">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a9e72043-ab31-4db4-9383-ca9087208d0c"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[HSB_NB14]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="111" y="0" width="111" height="20" backcolor="#D4D4D4" uuid="386b994e-6c47-4e2c-b2d6-20c6f454331a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3198ad50-6ad3-4e89-80b2-136fc35f3afa"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[TAR_HSC_NB1]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="222" y="0" width="111" height="20" backcolor="#D4D4D4" uuid="620402a8-bd7e-46da-8d2d-6bd57f43266e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10f599db-8792-4992-9a28-10c655d3c154"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Net Mass (TN)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="333" y="0" width="111" height="20" backcolor="#D4D4D4" uuid="5feac528-8bf5-4560-a99c-8a23ee01898d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e4b5eb2-8e3f-41c5-b429-be81cf9a7265"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Custom Value USD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="444" y="0" width="111" height="20" backcolor="#D4D4D4" uuid="d3f18cae-8eae-4caf-a261-d7729d258002">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fe005221-3457-4f5b-88eb-f77d489e09e0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[number]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
+			<textField pattern="#">
+				<reportElement x="111" y="0" width="111" height="21" uuid="3ba1e4e7-b645-4928-8923-c4f7fe714c22">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3198ad50-6ad3-4e89-80b2-136fc35f3afa"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{TAR_HSC_NB1}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="222" y="0" width="111" height="21" uuid="bc1dde92-0119-4fc1-9842-bc5e99e47450">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10f599db-8792-4992-9a28-10c655d3c154"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Net Mass (TN)}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="333" y="0" width="111" height="21" uuid="edee05d4-5be2-49bc-9c3b-58cc45c80f61">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4e4b5eb2-8e3f-41c5-b429-be81cf9a7265"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{Custom Value USD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###">
+				<reportElement x="444" y="0" width="111" height="21" uuid="81f841fe-4960-435c-9059-6154f204f461">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="fe005221-3457-4f5b-88eb-f77d489e09e0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{number}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###">
+				<reportElement x="0" y="0" width="111" height="21" uuid="ceac8786-1681-477d-bc27-4eb8801e70dc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{HSB_NB14}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="51" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="222" height="20" uuid="61da73f4-6df4-4c5d-8525-7a35a5345af7">
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField evaluationTime="Report" pattern="###,###.00">
+				<reportElement x="222" y="0" width="111" height="20" uuid="d2cd8ff5-bb22-49d2-a128-b409d9f06c8d"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{NetSum}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" pattern="###,###.00">
+				<reportElement x="333" y="0" width="111" height="20" uuid="13413e65-99de-4760-892d-2f6c949e60bb"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{USDSum}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="444" y="0" width="111" height="20" uuid="b926dd37-71c1-4a6a-9919-ef16f1260663"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{NumSum}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="22" splitType="Stretch">
+			<textField>
+				<reportElement x="200" y="2" width="164" height="19" uuid="302d065f-9559-4d34-a5b4-48990a2bde57"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

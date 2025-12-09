@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="reports" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fa8aaeb-fd1e-40d1-8a50-1a8ec662fa9e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="xmlreports"/>
+	<queryString language="XPath">
+		<![CDATA[rep:root/rep:maincat/rep:report
+]]>
+	</queryString>
+	<field name="hasOption" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="@hasOption"/>
+		<fieldDescription><![CDATA[@hasOption]]></fieldDescription>
+	</field>
+	<field name="rep:repid" class="java.lang.Integer">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:repid"/>
+		<fieldDescription><![CDATA[rep:repid]]></fieldDescription>
+	</field>
+	<field name="rep:title" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:title"/>
+		<fieldDescription><![CDATA[rep:title]]></fieldDescription>
+	</field>
+	<field name="rep:repname" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:repname"/>
+		<fieldDescription><![CDATA[rep:repname]]></fieldDescription>
+	</field>
+	<field name="rep:arname" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:arname"/>
+		<fieldDescription><![CDATA[rep:arname]]></fieldDescription>
+	</field>
+	<field name="rep:desc" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:desc"/>
+		<fieldDescription><![CDATA[rep:desc]]></fieldDescription>
+	</field>
+	<field name="rep:ardesc" class="java.lang.String">
+		<property name="net.sf.jasperreports.xpath.field.expression" value="rep:ardesc"/>
+		<fieldDescription><![CDATA[rep:ardesc]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="40" height="28" uuid="c1a3d4ba-357f-469b-a44f-425debc63450">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5be9a4d-a922-4c87-965a-f0c36923c612"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="40" y="0" width="240" height="28" uuid="f39d7ced-5e3d-487a-873d-11243bcde08a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2749942-fc72-4819-95b6-5896d17faf38"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Title]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="0" width="140" height="28" uuid="e60753d7-e393-4f79-9093-b7b17a667911">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02710dbe-4f07-4981-beb2-2ccba231e1e0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[File Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="140" height="28" uuid="a5660782-c20b-4b67-aa92-9e2a66658ebf">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae889bff-12c1-4a82-ba09-23dcb7afb78f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Arabic name]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="40" height="24" uuid="fba8fb75-de40-4abe-aaf0-b9963fb8b1be">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="a5be9a4d-a922-4c87-965a-f0c36923c612"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{rep:repid}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="40" y="0" width="240" height="24" uuid="de4e2c53-f0a6-4736-8c04-e2dc2c52ea2d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b2749942-fc72-4819-95b6-5896d17faf38"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{rep:title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="140" height="24" uuid="c79490d9-474a-4ea6-b4ce-a9432ce8c369">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="02710dbe-4f07-4981-beb2-2ccba231e1e0"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{rep:repname}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="140" height="24" uuid="8795e6bd-b018-48fb-b5d8-2b01bdd53f49">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ae889bff-12c1-4a82-ba09-23dcb7afb78f"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textFieldExpression><![CDATA[$F{rep:arname}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,329 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (COM_GRP?,YEAR?,TAR_PRF?,TOT_REL?)+>
+  <!ELEMENT COM_GRP (#PCDATA)>
+  <!ELEMENT YEAR (#PCDATA)>
+  <!ELEMENT TAR_PRF (#PCDATA)>
+  <!ELEMENT TOT_REL (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>12837248.64</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>94263399.52</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>27506102.82</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>278269038.26</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>1796413181.04</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Transport Equipments</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>800598908.81</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Tobacco</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>380804.54</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>254329.2</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>1419911.85</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>46240976.89</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>1308499.36</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>8592787.59</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Goverment </TAR_PRF>
+    <TOT_REL>256568.54</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Textiles</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>310835.22</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>1043220.36</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>736046.07</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>9543465.27</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>21809255.78</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>53195729.62</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Goverment </TAR_PRF>
+    <TOT_REL>902358.7</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Raw Materials</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>475052098.22</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>7981697.71</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>2167651.81</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>22111075.11</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>101761591.04</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>234535883.86</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Goverment </TAR_PRF>
+    <TOT_REL>2900076.54</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Manufactured  Goods</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>63178855.08</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>26253390.67</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>900027.17</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>11923464.99</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>24881129.46</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>144996671.73</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Goverment </TAR_PRF>
+    <TOT_REL>1767779.26</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Machinery and Equipme</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>376102143.32</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Live Animals</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>41572800</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>569818.41</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>675310.68</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>22184610.1</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>72175762.08</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>3973664.98</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP>Foodstuffs</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>51219393.15</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>2759857.49</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 186</TAR_PRF>
+    <TOT_REL>225529.52</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>36384.48</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Diplomatic&#13;&#10;</TAR_PRF>
+    <TOT_REL>947210.18</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>2145261.59</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Goverment </TAR_PRF>
+    <TOT_REL>47199.6</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Products of Chemica</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>199906918.16</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Others</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF> Others</TAR_PRF>
+    <TOT_REL>749.16</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Others</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Article 54</TAR_PRF>
+    <TOT_REL>22212</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Others</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>FIN</TAR_PRF>
+    <TOT_REL>201546.1</TOT_REL>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <COM_GRP> Others</COM_GRP>
+    <YEAR>2018</YEAR>
+    <TAR_PRF>Investment</TAR_PRF>
+    <TOT_REL>2543868.58</TOT_REL>
+  </DATA_RECORD>
+</main>

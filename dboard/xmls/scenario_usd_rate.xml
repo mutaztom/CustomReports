@@ -1,0 +1,11 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (CUR_NRAT?)+>
+  <!ELEMENT CUR_NRAT (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <CUR_NRAT>15</CUR_NRAT>
+  </DATA_RECORD>
+</main>

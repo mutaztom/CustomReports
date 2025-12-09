@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (Date?,Estimated_Total_Imports_USD?,Actual_Total_Imports_USD?,Estimated_Taxable_Imports?,ActualTaxable_Imports?)+>
+  <!ELEMENT Date (#PCDATA)>
+  <!ELEMENT Estimated_Total_Imports_USD (#PCDATA)>
+  <!ELEMENT Actual_Total_Imports_USD (#PCDATA)>
+  <!ELEMENT Estimated_Taxable_Imports (#PCDATA)>
+  <!ELEMENT ActualTaxable_Imports (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <Date>JAN 2018</Date>
+    <Estimated_Total_Imports_USD>317.3</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>494.54</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>120.6</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>252.93</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>FEB 2018</Date>
+    <Estimated_Total_Imports_USD>545.2</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>737.37</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>207.7</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>391.31</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>MAR 2018</Date>
+    <Estimated_Total_Imports_USD>643.7</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>728.45</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>241.1</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>414.03</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>APR 2018</Date>
+    <Estimated_Total_Imports_USD>573.6</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>670.91</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>217.9</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>393.46</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>MAY 2018</Date>
+    <Estimated_Total_Imports_USD>691.6</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>727.28</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>262.8</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>438.42</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>JUN 2018</Date>
+    <Estimated_Total_Imports_USD>577.69</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>520.94</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>219.5</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>332.85</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>JUL 2018</Date>
+    <Estimated_Total_Imports_USD>773.3</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>758.2</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>293.7</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>487.33</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>AUG 2018</Date>
+    <Estimated_Total_Imports_USD>771.3</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>559.57</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>293.1</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>375.29</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>SEP 2018</Date>
+    <Estimated_Total_Imports_USD>569.5</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>822.73</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>216.4</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>440.52</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>OCT 2018</Date>
+    <Estimated_Total_Imports_USD>768.9</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>831.31</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>292.2</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>505.89</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>NOV 2018</Date>
+    <Estimated_Total_Imports_USD>935.7</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>1245.46</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>355.6</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>607.5</ActualTaxable_Imports>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>DEC 2018</Date>
+    <Estimated_Total_Imports_USD>978.1</Estimated_Total_Imports_USD>
+    <Actual_Total_Imports_USD>1050.18</Actual_Total_Imports_USD>
+    <Estimated_Taxable_Imports>371.3</Estimated_Taxable_Imports>
+    <ActualTaxable_Imports>754.33</ActualTaxable_Imports>
+  </DATA_RECORD>
+</main>

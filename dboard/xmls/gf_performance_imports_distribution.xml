@@ -1,0 +1,310 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (MONTH_YEAR?,Rate?,Custom_Value_USD?)+>
+  <!ELEMENT MONTH_YEAR (#PCDATA)>
+  <!ELEMENT Rate (#PCDATA)>
+  <!ELEMENT Custom_Value_USD (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <MONTH_YEAR>JAN 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>288975988.39</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>FEB 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>426478028.2</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAR 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>384073441.8</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>APR 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>355846175.85</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAY 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>361951776.7</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUN 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>239257892.89</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUL 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>335624070.24</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>AUG 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>261106856.47</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>SEP 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>439460552.9</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>OCT 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>407033923.36</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>NOV 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>732823511.88</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>DEC 2018</MONTH_YEAR>
+    <Rate>0</Rate>
+    <Custom_Value_USD>434827980.46</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JAN 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>3571054.82</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>FEB 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>11014234.07</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAR 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>5432190.1</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>APR 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>8094084.02</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAY 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>6520093.04</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUN 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>7162408.76</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUL 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>17814907.06</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>AUG 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>12102067.76</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>SEP 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>14281978.85</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>OCT 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>23886927.12</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>NOV 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>40312074.84</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>DEC 2018</MONTH_YEAR>
+    <Rate>3</Rate>
+    <Custom_Value_USD>33988471.58</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JAN 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>109228523.13</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>FEB 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>189539974.13</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAR 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>188387512.14</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>APR 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>185443219.15</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAY 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>175148308.14</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUN 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>106892000.89</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUL 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>213022381.96</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>AUG 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>139890359.17</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>SEP 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>171628083.43</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>OCT 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>167811360.11</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>NOV 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>246751330.24</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>DEC 2018</MONTH_YEAR>
+    <Rate>10</Rate>
+    <Custom_Value_USD>273131035.8</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JAN 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>50764296.32</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>FEB 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>65161761.05</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAR 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>73022474.5</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>APR 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>87103122.62</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAY 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>106099056.74</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUN 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>96273576.36</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUL 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>108536913.19</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>AUG 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>80569913.27</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>SEP 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>99812211.41</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>OCT 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>130531015.05</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>NOV 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>120948174.63</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>DEC 2018</MONTH_YEAR>
+    <Rate>25</Rate>
+    <Custom_Value_USD>171404523.27</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JAN 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>89361365.81</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>FEB 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>125596901.09</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAR 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>147188824.82</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>APR 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>112818756.54</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>MAY 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>150650004.12</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUN 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>122518789.95</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>JUL 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>147952295.22</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>AUG 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>142731269.48</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>SEP 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>154797464.64</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>OCT 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>183662341.93</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>NOV 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>199484390.06</Custom_Value_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <MONTH_YEAR>DEC 2018</MONTH_YEAR>
+    <Rate>40</Rate>
+    <Custom_Value_USD>275810532.2</Custom_Value_USD>
+  </DATA_RECORD>
+</main>

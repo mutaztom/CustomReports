@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (VAT_Rates?)+>
+  <!ELEMENT VAT_Rates (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <VAT_Rates>0</VAT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <VAT_Rates>8.5</VAT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <VAT_Rates>15</VAT_Rates>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <VAT_Rates>17</VAT_Rates>
+  </DATA_RECORD>
+</main>

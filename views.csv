@@ -1,0 +1,43 @@
+*;All views;Admin Only
+IMFItem;ÇáÊŞÑíÑ Çáßáí áÑÓã ÇáæÇÑÏ áÕäÏæŞ ÇáäŞÏ ÇáÏæáí ÈÇáÓáÚÉ;report
+IMFGrp;ÇáÊŞÑíÑ Çáßáí áÑÓã ÇáæÇÑÏ ÈÇáãÌãæÚÇÊ ÇáÓáÚíÉ;report
+imdtaxrateanal;ÊŞÑíÑ ÑÓã ÇáæÇÑÏ;report
+imdcauseofloss;ÊŞÑíÑ ÇáİÇŞÏ ÇáÅíÑÇÏí áÑÓã ÇáæÇÑÏ ÈÇáÃÓÈÇÈ;report
+IMDCauseZero;ÇáİÇŞÏ ÇáÇíÑÇÏí Çáßáí áÑÓã ÇáæÇÑÏ;report
+vatanal;ÊŞÑíÑ ÑÓã ÇáæÇÑÏ ÇáİÆÉ ÇáÕİÑíÉ;report
+taxrateanalysis;ÊŞÑíÑ ÇáŞíãÉ ÇáãÖÇİÉ;report
+vatcauseofloss;ÊŞÑíÑ ÇáİÇŞÏ ÇáÖÑíÈí ááŞíãÉ ÇáãÖÇİÉ;report
+VATCuaseZero;ÇáİÇŞÏ ÇáÇíÑÇÏí Çáßáí ááŞíãÉ ÇáãÖÇİÉ;report
+vatzeroratedanalysis;ÊŞÑíÑ ÇáŞíãÉ ÇáãÖÇİÉ ÇáİÆÉ ÇáÕİÑíÉ;report
+adttaxratesanalysis;ÊŞÑíÑ ÇáÑÓã ÇáÅÖÇİí;report
+adtcauseofloss;ÇáİÇŞÏ ÇáÖÑíÈí ááÑÓã ÇáÅÖÇİí;report
+ADTCuaseZero;ÇáİÇŞÏ ÇáÇíÑÇÏí Çáßáí ááÑÓã ÇáÇÖÇİí;report
+adtzeroratedanalysis;ÊŞÑíÑ ÇáÑÓã ÇáÅÖÇİí ÇáİÆÉ ÇáÕİÑíÉ;report
+ExpGrp;ÓáÚ ÇáÕÇÏÑ(ÈÇáãÌãæÚÉ ÇáÓáÚíÉ);report
+ExportCom;ÓáÚ ÇáÕÇÏÑ (ÈÇáÓáÚÉ);report
+tbcompareyear;ÇáãíÒÇä ÇáÊÌÇÑí Èíä ÇáÓäÉ ÇáÍÇáíÉ æ ÇáÓäÉ ÇáãÇÖíÉ (áÔåÑ ãÚíä);report
+genfinanperformance;ÇáÃÏÇÁ ÇáãÇáí ÇáÚÇã;report
+accumtotalimp;ÇáÃÏÇÁ ÇáİÚáí áŞíãÉ ÇáæÇÑÏÇÊ ÇáßáíÉ;report
+taxableimports;ÇáÃÏÇÁ ÇáİÚáí áŞíãÉ ÇáæÇÑÏÇÊ ÇáÎÇÖÚÉ ááÑÓæã ÇáÌãÑßíÉ;report
+curlasttotalimports;ŞíãÉ ÇáæÇÑÏÇÊ ÇáßáíÉ Èíä ÇáÓäÉ ÇáÍÇáíÉ æ ÇáÓäÉ ÇáãÇÖíÉ (áÔåÑ ãÚíä);report
+CountryAgreementsLoss;ÇáÇÊİÇŞíÇÊ ÈÇáÈáÏÇä æÇáİÇŞÏ ÇáÇíÑÇÏí;report
+CommodityAgreements;ÇáÇÊİÇŞíÇÊ ÈÇáÓáÚ;report
+GroupAgreements;ÇáÇÊİÇŞíÇÊ ÈÇáãÌãæÚÇÊ;report
+TradeExchangeCountries;ÇáÊÈÇÏá ÇáÊÌÇÑí ÈÇáÈáÏÇä æÇÑÏÇÊ;report
+TradeExchangeCommodity;ÇáÊÈÇÏá ÇáÊÌÇÑí ÈÇáÓáÚ æÇÑÏÇÊ;report
+TradeExchangeGroups;ÇáÊÈÇÏá ÇáÊÌÇÑí ÈÇáãÌãæÚÇÊ æÇÑÏÇÊ;report
+ExTradeExchangeGroupsCom;ÇáÊÈÇÏá ÇáÊÌÇÑí ÈÇáãÌãæÚÇÊ æÇáÓáÚ ÕÇÏÑÇÊ;report
+ExTradeExchangeGroups;ÇáÊÈÇÏá ÇáÊÌÇÑì Èíä ÇáÏæá ÈÇáãÌãæÚÇÊ ÕÇÏÑÇÊ;report
+ExTradeExchangeCountries;ÇáÊÈÇÏá ÇáÊÌÇÑí ááÏæá ÕÇÏÑÇÊ;report
+TradeBalanceCountries;ÇáãíÒÇä ÇáÊÌÇÑí ÈÇáÏæá;report
+TopCon;ÇÚáì ÇÇáãÑÏíä;report
+TopDec;ÇÚáì ÇáãÎáÕíä;report
+TopExporter;ÇÚáì ÇáãÕÏÑíä;report
+IMDinvFull;ÇáİŞÇÏ ÇáÇíÑÇÏí Çáßáí áÑÓã æÇÑÏ ÈŞÇäæä ÇáÇÓÊËãÇÑ;report
+IMDinvPart;ÇáİŞÇÏ ÇáÇíÑÇÏí ÇáÌÒÆí áÑÓã æÇÑÏ ÈŞÇäæä ÇáÇÓÊËãÇÑ;report
+S001HS;ÇáÊÚÏíá Úáí ÇáÈäÏ;report
+S001DecHs;ÇáÊÚÏíá Úáí ÇáÈäÏ ãÚ ÇáãÎáÕ;report
+S001NAT;ÇáÊÚÏíá Úáí ÇáÇÌÑÇÁ ÇáŞæãí;report
+S001EXT;ŞæÇÆã ÊÍÊ ÇáÑŞÇÈÉ;report
+UnderControl;ŞæÇÆã ÊÍÊ ÇáÑŞÇÈÉ;report
+BlackList;ÇáŞÇÆãÉ ÇáÓæÏÇÁ;report

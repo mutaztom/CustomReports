@@ -1,0 +1,130 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (ImpEXTYPe?,Month_Year?,TOT_CIF_USD?)+>
+  <!ELEMENT ImpEXTYPe (#PCDATA)>
+  <!ELEMENT Month_Year (#PCDATA)>
+  <!ELEMENT TOT_CIF_USD (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>APR 2018</Month_Year>
+    <TOT_CIF_USD>292858743.05</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>AUG 2018</Month_Year>
+    <TOT_CIF_USD>206214882.04</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>DEC 2018</Month_Year>
+    <TOT_CIF_USD>332356355.98</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>FEB 2018</Month_Year>
+    <TOT_CIF_USD>293045509.81</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>JAN 2018</Month_Year>
+    <TOT_CIF_USD>618880379.35</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>JUL 2018</Month_Year>
+    <TOT_CIF_USD>241458641.97</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>JUN 2018</Month_Year>
+    <TOT_CIF_USD>200467982.45</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>MAR 2018</Month_Year>
+    <TOT_CIF_USD>256539035.32</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>MAY 2018</Month_Year>
+    <TOT_CIF_USD>263315327.97</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>NOV 2018</Month_Year>
+    <TOT_CIF_USD>210660519.4</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>OCT 2018</Month_Year>
+    <TOT_CIF_USD>275236593.33</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>1</ImpEXTYPe>
+    <Month_Year>SEP 2018</Month_Year>
+    <TOT_CIF_USD>233277735.64</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>APR 2018</Month_Year>
+    <TOT_CIF_USD>749305358.17</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>AUG 2018</Month_Year>
+    <TOT_CIF_USD>636400466.15</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>DEC 2018</Month_Year>
+    <TOT_CIF_USD>1189162543.31</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>FEB 2018</Month_Year>
+    <TOT_CIF_USD>817790898.54</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>JAN 2018</Month_Year>
+    <TOT_CIF_USD>541901228.47</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>JUL 2018</Month_Year>
+    <TOT_CIF_USD>822950567.68</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>JUN 2018</Month_Year>
+    <TOT_CIF_USD>572104668.85</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>MAR 2018</Month_Year>
+    <TOT_CIF_USD>798104443.36</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>MAY 2018</Month_Year>
+    <TOT_CIF_USD>800369238.74</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>NOV 2018</Month_Year>
+    <TOT_CIF_USD>1340319481.65</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>OCT 2018</Month_Year>
+    <TOT_CIF_USD>912925567.58</TOT_CIF_USD>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <ImpEXTYPe>4</ImpEXTYPe>
+    <Month_Year>SEP 2018</Month_Year>
+    <TOT_CIF_USD>879980291.23</TOT_CIF_USD>
+  </DATA_RECORD>
+</main>

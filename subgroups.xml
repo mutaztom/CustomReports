@@ -1,0 +1,161 @@
+<root>
+  <commgroup>
+    <mainid>1</mainid>
+    <catid>1</catid>
+    <comset>
+      <commgroupid>00009521</commgroupid>
+    </comset>
+    <catname>Manufactured Products</catname>
+    <arcatname>السلع المصنعة</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>1</mainid>
+    <catid>2</catid>
+    <comset>
+      <commgroupid>002</commgroupid>
+    </comset>
+    <catname>Machinaries and equipments</catname>
+    <arcatname>الألات والمعدات</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>7</mainid>
+    <catid>3</catid>
+    <comset>
+      <commgroupid>test3</commgroupid>
+    </comset>
+    <catname>Raw Metal</catname>
+    <arcatname>حديد خام</arcatname>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+    <commgroupid>test3</commgroupid>
+  </commgroup>
+  <commgroup>
+    <mainid>2</mainid>
+    <catid>4</catid>
+    <comset>
+      <commgroupid>test 4</commgroupid>
+    </comset>
+    <catname>Oil and gas</catname>
+    <arcatname>معدات النقل</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>2</mainid>
+    <catid>5</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>الكيماويات</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>2</mainid>
+    <catid>6</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>المنسوجات</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>7</mainid>
+    <catid>7</catid>
+    <comset>
+      <commgroupid>test7</commgroupid>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>المواد الخام</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>3</mainid>
+    <catid>8</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>التبغ والمشروبات</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>3</mainid>
+    <catid>9</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Industrial</catname>
+    <arcatname>الحيوانات الحية</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>10</mainid>
+    <catid>10</catid>
+    <comset>
+      <commgroupid/>
+    </comset>
+    <catname>Soft Drinks</catname>
+    <arcatname>المشروبات الغازية</arcatname>
+  </commgroup>
+  <commgroup>
+    <mainid>4</mainid>
+    <catid>11</catid>
+    <catname>test11</catname>
+    <arcatname>إختبار 11</arcatname>
+    <comset>
+      <commgroupid>111111</commgroupid>
+    </comset>
+  </commgroup>
+  <commgroup>
+    <catid>12</catid>
+    <catname>Gasolin</catname>
+    <arcatname>جازولين</arcatname>
+  </commgroup>
+  <commgroup>
+    <catid>12</catid>
+    <catname>Buscites</catname>
+    <arcatname>بسكويت</arcatname>
+    <mainid>10</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>12</catid>
+    <catname>Sweets</catname>
+    <arcatname>حلويات</arcatname>
+    <mainid>10</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>12</catid>
+    <catname>Subgroup 1</catname>
+    <arcatname>مجموعة جزئية 1</arcatname>
+    <mainid>11</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>13</catid>
+    <catname>Segaret</catname>
+    <arcatname>سجائر</arcatname>
+    <mainid>8</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>14</catid>
+    <catname>Subgroup 2</catname>
+    <arcatname>مجموعة جزئية 2</arcatname>
+    <mainid>11</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>15</catid>
+    <catname>Subgroup 3</catname>
+    <arcatname>مجموعة جزئية 3</arcatname>
+    <mainid>11</mainid>
+  </commgroup>
+  <commgroup>
+    <catid>16</catid>
+    <catname>Cars</catname>
+    <arcatname>سيارات</arcatname>
+    <mainid>4</mainid>
+  </commgroup>
+</root>

@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.3.0.final using JasperReports Library version 6.3.0  -->
+<!-- 2019-10-05T11:09:05 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="VATCuaseZero" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isFloatColumnFooter="true" uuid="07e7faa3-6b48-47de-8855-4ae0ec9eff80">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="ReportsDB"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="startdate" class="java.sql.Date"/>
+	<parameter name="enddate" class="java.sql.Date"/>
+	<parameter name="title" class="java.lang.String"/>
+	<parameter name="repstartdate" class="java.lang.String"/>
+	<parameter name="rependdate" class="java.lang.String"/>
+	<parameter name="username" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT ALL 'Bilateral'  Cuase_Of_Loss, SUM(AWUNADM.GEN_ITEM_N_2.VIT_WGT_NET) Net_Mass_KG, 
+SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF) Custom_Value_SDG, SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF/DECODE(AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, 
+AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                       
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) Custom_Value_USD, 
+SUM(AWUNADM.SAD_RELIEF.TAX_AMOUNT) Duty_Loss_SDG
+FROM AWUNADM.SAD_TAX, AWUNADM.GEN_ITEM_N_2, 
+AWUNADM.N_UNTARTAB, AWUNADM.SAD_RELIEF, AWUNADM.PRF_DESC_VIEW
+WHERE (AWUNADM.GEN_ITEM_N_2.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.N_UNTARTAB.VALID_TO IS NULL
+ AND AWUNADM.SAD_TAX.TAX_LIN_COD='VAT'
+and AWUNADM.SAD_TAX.TAX_LIN_AMT=0
+ AND AWUNADM.SAD_RELIEF.TAX_CODE='VAT'
+ AND AWUNADM.GEN_ITEM_N_2.GDS_ORG_CTY='ETH')
+ AND  ((AWUNADM.GEN_ITEM_N_2.N_H6=AWUNADM.N_UNTARTAB.N_T_H6(+))
+ AND (AWUNADM.GEN_ITEM_N_2.INSTANCEID=AWUNADM.SAD_TAX.INSTANCEID(+))
+ AND (AWUNADM.GEN_ITEM_N_2.KEY_ITM_NBR=AWUNADM.SAD_TAX.KEY_ITM_NBR(+))
+ AND (AWUNADM.SAD_TAX.INSTANCEID=AWUNADM.SAD_RELIEF.INSTANCEID)
+ AND (AWUNADM.SAD_TAX.KEY_ITM_NBR=AWUNADM.SAD_RELIEF.KEY_ITM_NBR)
+ AND (AWUNADM.PRF_DESC_VIEW.TAR_PRF=AWUNADM.GEN_ITEM_N_2.TAR_PRF)
+ AND (AWUNADM.PRF_DESC_VIEW.TAR_PRF=AWUNADM.SAD_RELIEF.REL_CODE))
+GROUP BY AWUNADM.SAD_RELIEF.REL_CODE
+
+union
+SELECT ALL AWUNADM.SAD_RELIEF.REL_CODE Cuase_Of_Loss, SUM(AWUNADM.GEN_ITEM_N_2.VIT_WGT_NET) Net_Mass_KG, 
+SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF) Custom_Value_SDG, SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF/DECODE(AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, 
+AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                         
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) Custom_Value_USD, 
+SUM(AWUNADM.SAD_RELIEF.TAX_AMOUNT) Duty_Loss_SDG
+FROM AWUNADM.SAD_TAX, AWUNADM.GEN_ITEM_N_2, 
+AWUNADM.N_UNTARTAB, AWUNADM.SAD_RELIEF, AWUNADM.PRF_DESC_VIEW
+WHERE (AWUNADM.GEN_ITEM_N_2.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.N_UNTARTAB.VALID_TO IS NULL
+ AND AWUNADM.SAD_TAX.TAX_LIN_COD='VAT'
+and AWUNADM.SAD_TAX.TAX_LIN_AMT=0
+ AND AWUNADM.SAD_RELIEF.TAX_CODE='VAT'
+ AND AWUNADM.GEN_ITEM_N_2.GDS_ORG_CTY<>'ETH')
+ AND  ((AWUNADM.GEN_ITEM_N_2.N_H6=AWUNADM.N_UNTARTAB.N_T_H6(+))
+ AND (AWUNADM.GEN_ITEM_N_2.INSTANCEID=AWUNADM.SAD_TAX.INSTANCEID(+))
+ AND (AWUNADM.GEN_ITEM_N_2.KEY_ITM_NBR=AWUNADM.SAD_TAX.KEY_ITM_NBR(+))
+ AND (AWUNADM.SAD_TAX.INSTANCEID=AWUNADM.SAD_RELIEF.INSTANCEID)
+ AND (AWUNADM.SAD_TAX.KEY_ITM_NBR=AWUNADM.SAD_RELIEF.KEY_ITM_NBR)
+ AND (AWUNADM.PRF_DESC_VIEW.TAR_PRF=AWUNADM.GEN_ITEM_N_2.TAR_PRF)
+ AND (AWUNADM.PRF_DESC_VIEW.TAR_PRF=AWUNADM.SAD_RELIEF.REL_CODE))
+GROUP BY AWUNADM.SAD_RELIEF.REL_CODE
+
+union
+SELECT ALL AWUNADM.SAD_RELIEF.REL_CODE, SUM(AWUNADM.GEN_ITEM_N_2.VIT_WGT_NET) tot_wgt, 
+SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF) tot_cif, SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF/DECODE(AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, 
+AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                     
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1)))tot_cif_usd, 
+SUM(AWUNADM.SAD_RELIEF.TAX_AMOUNT) tot_loss
+FROM AWUNADM.SAD_TAX, 
+AWUNADM.GEN_ITEM_N_2, AWUNADM.N_UNTARTAB, AWUNADM.SAD_RELIEF
+WHERE (AWUNADM.GEN_ITEM_N_2.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.N_UNTARTAB.VALID_TO IS NULL
+ AND AWUNADM.SAD_TAX.TAX_LIN_COD='VAT'
+and AWUNADM.SAD_TAX.TAX_LIN_AMT=0
+ AND AWUNADM.SAD_RELIEF.TAX_CODE='VAT'
+ AND AWUNADM.SAD_RELIEF.REL_CODE IN ('FIN'))
+ AND  ((AWUNADM.GEN_ITEM_N_2.N_H6=AWUNADM.N_UNTARTAB.N_T_H6(+))
+ AND (AWUNADM.GEN_ITEM_N_2.INSTANCEID=AWUNADM.SAD_TAX.INSTANCEID(+))
+ AND (AWUNADM.GEN_ITEM_N_2.KEY_ITM_NBR=AWUNADM.SAD_TAX.KEY_ITM_NBR(+))
+ AND (AWUNADM.SAD_TAX.INSTANCEID=AWUNADM.SAD_RELIEF.INSTANCEID)
+ AND (AWUNADM.SAD_TAX.KEY_ITM_NBR=AWUNADM.SAD_RELIEF.KEY_ITM_NBR))
+GROUP BY AWUNADM.SAD_RELIEF.REL_CODE
+
+union 
+SELECT ALL AWUNADM.EXT_NAT_DESC.G_DESC, SUM(AWUNADM.GEN_ITEM_N_2.VIT_WGT_NET) tot_wgt, 
+SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF) tot_cif, SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF/DECODE(AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, 
+AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                 
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) tot_cif_usd, 
+SUM(AWUNADM.SAD_RELIEF.TAX_AMOUNT) tot_rel_loss
+FROM AWUNADM.SAD_TAX, AWUNADM.GEN_ITEM_N_2, 
+AWUNADM.N_UNTARTAB, AWUNADM.SAD_RELIEF, AWUNADM.EXT_NAT_DESC
+WHERE (AWUNADM.GEN_ITEM_N_2.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.N_UNTARTAB.VALID_TO IS NULL
+ AND AWUNADM.SAD_TAX.TAX_LIN_COD='VAT'
+and AWUNADM.SAD_TAX.TAX_LIN_AMT=0
+ AND AWUNADM.SAD_RELIEF.TAX_CODE='VAT')
+ AND  ((AWUNADM.GEN_ITEM_N_2.N_H6=AWUNADM.N_UNTARTAB.N_T_H6(+))
+ AND (AWUNADM.GEN_ITEM_N_2.INSTANCEID=AWUNADM.SAD_TAX.INSTANCEID(+))
+ AND (AWUNADM.GEN_ITEM_N_2.KEY_ITM_NBR=AWUNADM.SAD_TAX.KEY_ITM_NBR(+))
+ AND (AWUNADM.SAD_TAX.INSTANCEID=AWUNADM.SAD_RELIEF.INSTANCEID)
+ AND (AWUNADM.SAD_TAX.KEY_ITM_NBR=AWUNADM.SAD_RELIEF.KEY_ITM_NBR)
+ AND (AWUNADM.SAD_RELIEF.REL_CODE=AWUNADM.GEN_ITEM_N_2.TAR_PRC_NAT)
+ AND (AWUNADM.GEN_ITEM_N_2.EXT_NAT not in('400042','400043','400044','400045','400046','400047','400048'))
+ AND (AWUNADM.GEN_ITEM_N_2.TAR_PRC_EXT=AWUNADM.EXT_NAT_DESC.EXT)
+ AND (AWUNADM.GEN_ITEM_N_2.TAR_PRC_NAT=AWUNADM.EXT_NAT_DESC.NAT))
+GROUP BY AWUNADM.EXT_NAT_DESC.G_DESC
+
+union 
+SELECT ALL AWUNADM.NAT_REL_VIEW3.DESC_OTHERS,SUM(AWUNADM.GEN_ITEM_N_2.VIT_WGT_NET) tot_wgt, 
+SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF) tot_cif, SUM(AWUNADM.GEN_ITEM_N_2.VIT_CIF/DECODE(AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, 
+AWUNADM.GEN_ITEM_N_2.VGS_INV_CUR_RAT, (select 
+                            AWCURUPDATE_ITM.CUR_NRAT  CUR_NRAT
+                                        from    
+                                         AWUNADM.AWCURUPDATE_ITM,
+                                         AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+                              and AWCURUPDATE_GEN.VDAT =
+                                 (select 
+                   
+                              max(AWCURUPDATE_GEN.VDAT) MVDAT
+                            
+                            from    
+                             AWUNADM.AWCURUPDATE_ITM,
+                             AWUNADM.AWCURUPDATE_GEN
+                            Where    
+                              AWCURUPDATE_ITM.INSTANCE_ID = AWCURUPDATE_GEN.INSTANCE_ID 
+                              and AWCURUPDATE_ITM.CUR_COD ='USD'
+
+and AWCURUPDATE_GEN.VDAT <$P{enddate})
+and rownum=1))) tot_cif_usd, 
+SUM(AWUNADM.SAD_RELIEF.TAX_AMOUNT) tot_rel_loss
+FROM AWUNADM.SAD_TAX, AWUNADM.GEN_ITEM_N_2, 
+AWUNADM.N_UNTARTAB, AWUNADM.SAD_RELIEF, AWUNADM.NAT_REL_VIEW3
+WHERE (AWUNADM.GEN_ITEM_N_2.IDE_RCP_DAT BETWEEN $P{startdate} AND $P{enddate}
+ AND AWUNADM.N_UNTARTAB.VALID_TO IS NULL
+ AND AWUNADM.SAD_TAX.TAX_LIN_COD='VAT'
+ AND AWUNADM.SAD_RELIEF.TAX_CODE='VAT')
+ AND  ((AWUNADM.GEN_ITEM_N_2.N_H6=AWUNADM.N_UNTARTAB.N_T_H6(+))
+ AND (AWUNADM.GEN_ITEM_N_2.INSTANCEID=AWUNADM.SAD_TAX.INSTANCEID(+))
+ AND (AWUNADM.GEN_ITEM_N_2.KEY_ITM_NBR=AWUNADM.SAD_TAX.KEY_ITM_NBR(+))
+ AND (AWUNADM.SAD_TAX.INSTANCEID=AWUNADM.SAD_RELIEF.INSTANCEID)
+ AND (AWUNADM.SAD_TAX.KEY_ITM_NBR=AWUNADM.SAD_RELIEF.KEY_ITM_NBR)
+ AND (AWUNADM.SAD_RELIEF.REL_CODE=AWUNADM.GEN_ITEM_N_2.TAR_PRC_NAT)
+ AND (AWUNADM.NAT_REL_VIEW3.REL_CODE=AWUNADM.SAD_RELIEF.REL_CODE)  And AWUNADM.GEN_ITEM_N_2.TAR_PRC_EXT||AWUNADM.GEN_ITEM_N_2.TAR_PRC_NAT  not in (SELECT ALL AWUNADM.EXT_NAT_DESC.EXT||AWUNADM.EXT_NAT_DESC.NAT Ext_Nat
+FROM AWUNADM.EXT_NAT_DESC))
+GROUP BY AWUNADM.NAT_REL_VIEW3.DESC_OTHERS
+HAVING SUM(AWUNADM.SAD_TAX.TAX_LIN_AMT)=0
+ORDER BY 1 DESC]]>
+	</queryString>
+	<field name="CUASE_OF_LOSS" class="java.lang.String"/>
+	<field name="NET_MASS_KG" class="java.math.BigDecimal"/>
+	<field name="CUSTOM_VALUE_SDG" class="java.math.BigDecimal"/>
+	<field name="CUSTOM_VALUE_USD" class="java.math.BigDecimal"/>
+	<field name="DUTY_LOSS_SDG" class="java.math.BigDecimal"/>
+	<sortField name="CUSTOM_VALUE_SDG" order="Descending"/>
+	<variable name="NetSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{NET_MASS_KG}]]></variableExpression>
+	</variable>
+	<variable name="SDGSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{CUSTOM_VALUE_SDG}]]></variableExpression>
+	</variable>
+	<variable name="USDSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{CUSTOM_VALUE_USD}]]></variableExpression>
+	</variable>
+	<variable name="LossSum" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{DUTY_LOSS_SDG}]]></variableExpression>
+	</variable>
+	<variable name="Custom Value SDG_SUM" class="java.math.BigDecimal" calculation="Sum">
+		<variableExpression><![CDATA[$F{CUSTOM_VALUE_SDG}]]></variableExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="125" splitType="Stretch">
+			<image hAlign="Center" onErrorType="Icon">
+				<reportElement x="45" y="0" width="469" height="60" uuid="20638789-5c8b-4708-b6dd-1c293c095c3e">
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<imageExpression><![CDATA[System.getenv("CUSTREPDATA")+"/reports/header.jpg"]]></imageExpression>
+			</image>
+			<textField>
+				<reportElement x="45" y="63" width="469" height="30" uuid="13240583-31eb-4179-a101-abacb158a169"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{title}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="45" y="95" width="469" height="30" uuid="93fbdeeb-77ca-4671-88e7-0d64dc652c22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["From "+$P{repstartdate}+ " To "+$P{rependdate}+  "  By User: "+$P{username}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="60" height="17" uuid="9550bf6e-e36b-4161-a4bd-eadc5a3b90a6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Master" pattern="MMMMM dd, yyyy">
+				<reportElement x="60" y="0" width="100" height="17" uuid="2d38f8e0-008a-4daf-a043-ca62b4133574"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="65" y="0" width="64" height="20" backcolor="#DBD7D7" uuid="0a789f50-0414-4176-ab35-1d451292f62e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c1cd60fd-d328-4ffe-9db7-56375a712e82"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Cause]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="129" y="0" width="80" height="20" backcolor="#DBD7D7" uuid="419e6a86-eaf8-4d74-80ac-14dd99a47632">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3440f698-60c4-4405-9bf9-bd51dd0497b8"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Net Mass  (Kg)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="209" y="0" width="80" height="20" backcolor="#DBD7D7" uuid="72f7f955-3a42-408e-8b0c-b614db040c0a">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea0f55cb-fe26-4189-bc46-00e15061c061"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Value  (SDG)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="289" y="0" width="80" height="20" backcolor="#DBD7D7" uuid="c90b70de-0ddb-4430-9e6b-068a3116958e">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4fc5453f-6b3a-4f3d-8889-51256442ce33"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Value  (USD)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="369" y="0" width="80" height="20" backcolor="#DBD7D7" uuid="6dff90b6-3069-4c4b-bf15-161bc707504d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10866a36-25ac-4118-9972-2a140bc4fa8c"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Loss  (SDG)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="449" y="0" width="45" height="20" backcolor="#DBD7D7" uuid="03af2898-4a12-4876-ae18-86e060da2582">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d89537df-900d-462f-b86f-da411a0286b2"/>
+					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[%]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<textField pattern="###">
+				<reportElement x="65" y="0" width="64" height="20" uuid="57623d82-b5c7-4127-a9a4-201ab39cb7da">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c1cd60fd-d328-4ffe-9db7-56375a712e82"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font size="8" isBold="true"/>
+					<paragraph leftIndent="3"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUASE_OF_LOSS}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="129" y="0" width="80" height="20" uuid="b4c8acf3-306f-491e-9237-b2854bcd3277">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3440f698-60c4-4405-9bf9-bd51dd0497b8"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{NET_MASS_KG}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="209" y="0" width="80" height="20" uuid="9ba1dd78-394f-4c9e-9b75-a7e618f4f4a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="ea0f55cb-fe26-4189-bc46-00e15061c061"/>
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTOM_VALUE_SDG}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="289" y="0" width="80" height="20" uuid="b92d3287-3406-47e5-85cf-919cbf3ec7a4">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4fc5453f-6b3a-4f3d-8889-51256442ce33"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTOM_VALUE_USD}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="369" y="0" width="80" height="20" uuid="4dfd8713-e043-4640-9fa3-807bf4c532d2">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="10866a36-25ac-4118-9972-2a140bc4fa8c"/>
+					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{DUTY_LOSS_SDG}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto" pattern="#,##0.00%">
+				<reportElement x="449" y="0" width="45" height="20" uuid="2877f474-c299-487e-bfb5-b6cbf3a30191">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{CUSTOM_VALUE_SDG}.doubleValue() / $V{SDGSum}.doubleValue()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="44" splitType="Stretch">
+			<staticText>
+				<reportElement x="65" y="0" width="64" height="20" uuid="0c0043ba-5bc3-4b7a-abf0-3cc2983411b6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField pattern="###,###.00">
+				<reportElement x="129" y="0" width="80" height="20" uuid="884747bb-ddef-44c7-b261-bf96e62ace95">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{NetSum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="209" y="0" width="80" height="20" uuid="6abf0e25-ff05-4b1a-941c-68854eb55182"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{SDGSum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="289" y="0" width="80" height="20" uuid="fd95f608-8415-40cf-b8db-8c2eff4fdce3"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{USDSum}]]></textFieldExpression>
+			</textField>
+			<textField pattern="###,###.00">
+				<reportElement x="369" y="0" width="80" height="20" uuid="7c83779a-9922-4aef-ac75-dd6ced6dd31f"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{LossSum}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Auto" pattern="#,##0.##">
+				<reportElement x="449" y="0" width="45" height="20" uuid="90a5248d-a2c1-4f85-9e44-f26a389b5298">
+					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
+				</reportElement>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["100 %"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="158" y="0" width="100" height="17" uuid="71a8a06d-5dc6-4124-9549-5f7611b62082"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA["Page " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement x="258" y="0" width="100" height="17" uuid="b9caf564-312e-425f-8a18-2e745e170875"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[" of " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

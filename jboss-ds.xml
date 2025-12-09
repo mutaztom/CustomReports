@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<datasources xmlns="http://www.jboss.org/ironjacamar/schema"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="
+        http://www.jboss.org/ironjacamar/schema
+        http://docs.jboss.org/ironjacamar/schema/datasources_1_0.xsd">
+    <datasource jndi-name="java:jboss/datasources/oracustom" pool-name="oracustom" enabled="true">
+        <connection-url>jdbc:oracle:thin:@localhost:1521:ORCLCDB</connection-url>
+        <driver>oracle</driver>
+        <pool>
+            <min-pool-size>1</min-pool-size>
+            <max-pool-size>5</max-pool-size>
+            <prefill>true</prefill>
+        </pool>
+        <security>
+            <user-name>AWUNADM</user-name>
+            <password>aA123456</password>
+        </security>
+        </datasource>
+</datasources>

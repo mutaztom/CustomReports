@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<rep:root
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:rep="null"
+        xsi:schemaLocation="com.rationalteam /WEB-INF/reports.xsd" xmlns:p="null">
+    <rep:maincat rep:category="Overview" rep:arname="لمحة عامة">
+        <rep:report hasOption="false">
+            <rep:repid>1</rep:repid>
+            <rep:title>overview</rep:title>
+            <rep:repname>overview</rep:repname>
+            <rep:arname>لمحة عامة</rep:arname>
+            <rep:desc>Overview</rep:desc>
+            <rep:ardesc>لمحة عامة</rep:ardesc>
+        </rep:report>
+	<rep:report hasOption="false">
+            <rep:repid>2</rep:repid>
+            <rep:title>Trade Balance Test</rep:title>
+            <rep:repname>TB2018Live2</rep:repname>
+            <rep:arname>الميزان التجاري اختبار</rep:arname>
+            <rep:desc>TB2018Live2</rep:desc>
+            <rep:ardesc>TB2018Live2</rep:ardesc>
+        </rep:report>
+    
+        <rep:report hasOption="false">
+            <rep:repid>3</rep:repid>
+            <rep:title>General financial Performance</rep:title>
+            <rep:repname>gen_fin</rep:repname>
+            <rep:arname>الأداء المالي</rep:arname>
+            <rep:desc>General financial Performance</rep:desc>
+            <rep:ardesc> الاداء المالي العام</rep:ardesc>
+        </rep:report>
+
+        <rep:report hasOption="false">
+            <rep:repid>4</rep:repid>
+            <rep:title>IMD analysis</rep:title>
+            <rep:repname>custom_imd</rep:repname>
+            <rep:arname>تحليل رسم الوارد</rep:arname>
+            <rep:desc>IMD Rate analysis Report</rep:desc>
+            <rep:ardesc> تحليل رسم الوارد</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="false">
+            <rep:repid>5</rep:repid>
+            <rep:title>VAT analysis</rep:title>
+            <rep:repname>custom_vat</rep:repname>
+            <rep:arname>تحليل ضريبة القيمة المضافة</rep:arname>
+            <rep:desc>VAT Rate analysis Report</rep:desc>
+            <rep:ardesc> تحليل ضريبة القيمة المضافة</rep:ardesc>
+        </rep:report>
+		<rep:report hasOption="false">
+            <rep:repid>6</rep:repid>
+            <rep:title>ADT analysis</rep:title>
+            <rep:repname>custom_adt</rep:repname>
+            <rep:arname>تحليل الرسم الإضافي</rep:arname>
+            <rep:desc>ADT Rate analysis Report</rep:desc>
+            <rep:ardesc> تحليل الرسم الإضافي</rep:ardesc>
+        </rep:report>
+        <rep:report hasOption="false">
+            <rep:repid>7</rep:repid>
+            <rep:title>Maps</rep:title>
+            <rep:repname>maps</rep:repname>
+            <rep:arname>الخرائط</rep:arname>
+            <rep:desc>International Monetry Fund All Duties</rep:desc>
+            <rep:ardesc> الخرائط</rep:ardesc>
+        </rep:report>
+</rep:maincat>
+<rep:maincat rep:category="Scenario Planning" rep:arname="سيناريوهات التخطيط">
+        <rep:report hasOption="false">
+            <rep:repid>8</rep:repid>
+            <rep:title>Scenario Planning</rep:title>
+            <rep:repname>scenario_plan</rep:repname>
+            <rep:arname>سيناريوهات التخطيط</rep:arname>
+            <rep:desc>International Monetry Fund All Duties</rep:desc>
+            <rep:ardesc> نموذج سيناريوهات الموازنة</rep:ardesc>
+        </rep:report>
+    </rep:maincat>
+
+</rep:root>
+
+

@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>OraCustom</name><driver>oracle.jdbc.driver.OracleDriver</driver><username>AWUNADM</username><password>mezopass</password><savePassword>true</savePassword><url>jdbc:oracle:thin:@localhost:9001:ORCLCDB</url><database></database><serverAddress></serverAddress><classpath>/home/mutaz/rtgit/jlib/ojdbc7.jar</classpath></jdbcDataAdapter>

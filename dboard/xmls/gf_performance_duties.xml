@@ -1,0 +1,96 @@
+<?xml version="1.0" ?>
+<!DOCTYPE main [
+  <!ELEMENT main (DATA_RECORD*)>
+  <!ELEMENT DATA_RECORD (Date?,Estimated_Customs_Duty?,Actual_Customs_Duty?,Estimated_VAT?,Actual_VAT_Tax?)+>
+  <!ELEMENT Date (#PCDATA)>
+  <!ELEMENT Estimated_Customs_Duty (#PCDATA)>
+  <!ELEMENT Actual_Customs_Duty (#PCDATA)>
+  <!ELEMENT Estimated_VAT (#PCDATA)>
+  <!ELEMENT Actual_VAT_Tax (#PCDATA)>
+]>
+<main>
+  <DATA_RECORD>
+    <Date>FEB 2018</Date>
+    <Estimated_Customs_Duty>1389.39</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1603114430.12</Actual_Customs_Duty>
+    <Estimated_VAT>1076.51</Estimated_VAT>
+    <Actual_VAT_Tax>1119310533.69</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>MAR 2018</Date>
+    <Estimated_Customs_Duty>1631.27</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1729316316.97</Actual_Customs_Duty>
+    <Estimated_VAT>1163.64</Estimated_VAT>
+    <Actual_VAT_Tax>1348720671.54</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>APR 2018</Date>
+    <Estimated_Customs_Duty>1447.56</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1535160050.05</Actual_Customs_Duty>
+    <Estimated_VAT>1074.46</Estimated_VAT>
+    <Actual_VAT_Tax>1152078245.56</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>MAY 2018</Date>
+    <Estimated_Customs_Duty>1756.75</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1658729193.11</Actual_Customs_Duty>
+    <Estimated_VAT>1272.42</Estimated_VAT>
+    <Actual_VAT_Tax>1193778448.47</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>JUN 2018</Date>
+    <Estimated_Customs_Duty>1452.21</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1212627666.25</Actual_Customs_Duty>
+    <Estimated_VAT>1058.37</Estimated_VAT>
+    <Actual_VAT_Tax>819691923.71</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>JUL 2018</Date>
+    <Estimated_Customs_Duty>1963.72</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1823315916.3</Actual_Customs_Duty>
+    <Estimated_VAT>1241.46</Estimated_VAT>
+    <Actual_VAT_Tax>1394334472.63</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>AUG 2018</Date>
+    <Estimated_Customs_Duty>1956.78</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1439419015.96</Actual_Customs_Duty>
+    <Estimated_VAT>1299.92</Estimated_VAT>
+    <Actual_VAT_Tax>1099085371.17</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>SEP 2018</Date>
+    <Estimated_Customs_Duty>1444.69</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>1875175936.11</Actual_Customs_Duty>
+    <Estimated_VAT>1047.1</Estimated_VAT>
+    <Actual_VAT_Tax>1392767388.24</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>OCT 2018</Date>
+    <Estimated_Customs_Duty>1947</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>2231306206.32</Actual_Customs_Duty>
+    <Estimated_VAT>1390.83</Estimated_VAT>
+    <Actual_VAT_Tax>1562116594.3</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>NOV 2018</Date>
+    <Estimated_Customs_Duty>2368.96</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>2502098520.09</Actual_Customs_Duty>
+    <Estimated_VAT>1308.01</Estimated_VAT>
+    <Actual_VAT_Tax>1728758320.72</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>DEC 2018</Date>
+    <Estimated_Customs_Duty>2372.08</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>3730194631.21</Actual_Customs_Duty>
+    <Estimated_VAT>1323.77</Estimated_VAT>
+    <Actual_VAT_Tax>2450281473.93</Actual_VAT_Tax>
+  </DATA_RECORD>
+  <DATA_RECORD>
+    <Date>JAN 2018</Date>
+    <Estimated_Customs_Duty>807.19</Estimated_Customs_Duty>
+    <Actual_Customs_Duty>882617774.79</Actual_Customs_Duty>
+    <Estimated_VAT>834.51</Estimated_VAT>
+    <Actual_VAT_Tax>810183516.35</Actual_VAT_Tax>
+  </DATA_RECORD>
+</main>
